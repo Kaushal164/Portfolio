@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog.title }} - {{ profile.name }}</title>
+    <meta name="description" content="{{ blog.excerpt }}">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/main/css/style.css">
+</head>
+<body data-theme="light">
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">{{ profile.name }}</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'home' %}#about">About</a></li>
+                <li><a href="{% url 'home' %}#skills">Skills</a></li>
+                <li><a href="{% url 'home' %}#projects">Projects</a></li>
+                <li><a href="{% url 'home' %}#experience">Experience</a></li>
+                <li><a href="{% url 'home' %}#blog">Blog</a></li>
+                <li><a href="{% url 'home' %}#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Blog Post -->
+    <section class="section">
+        <div class="container">
+            <article class="card">
+                {% if blog.image %}
+                <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 2rem;">
+                {% endif %}
+                
+                <h1>{{ blog.title }}</h1>
+                <p class="date">{{ blog.created_at|date:"F d, Y" }}</p>
+                
+                <div style="margin-top: 2rem; line-height: 1.8;">
+                    {{ blog.content|safe }}
+                </div>
+            </article>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="{% url 'home' %}#blog" class="btn">← Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 2rem; background-color: var(--card-bg); border-top: 1px solid var(--border-color);">
+        <p>&copy; {{ profile.copyright_year }} {{ profile.name }}. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="/static/main/js/script.js"></script>
+</body>
+</html>

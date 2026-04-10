@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.name }} - {{ profile.title }}</title>
+    <meta name="description" content="{{ profile.name }} is a {{ profile.title }} based in {{ profile.location }}. {{ profile.summary }}">
+    <meta name="keywords" content="UI/UX designer, product design, interaction design, portfolio, {{ profile.location }}">
+    <meta name="theme-color" content="#10b981">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'main/images/favicon.ico' %}">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/enhancements.css' %}">
+</head>
+<body data-theme="dark">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container nav-bar">
+            <div class="logo">KA</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <!-- Particle Background -->
+        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+        <div class="container hero-grid" style="position: relative; z-index: 1;">
+            <aside class="hero-panel card" data-parallax="0.15" data-aos="fade-right">
+                <div class="profile-chip">Available for work</div>
+                <div class="profile-avatar">
+                    <div class="avatar-ring">
+                        <img src="{% static 'main/images/profile.jpg' %}" alt="{{ profile.name }}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">
+                    </div>
+                </div>
+                <h1>{{ profile.name }}</h1>
+                <p class="hero-role">Software Developer</p>
+                <p class="hero-location">Location: Kathmandu, Nepal</p>
+
+                <p class="hero-summary">{{ profile.hero_summary }}</p>
+
+                <div class="hero-actions">
+                    <a href="{% url 'resume_pdf' %}" class="btn btn-primary">Download CV</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+
+                <div class="hero-contacts" style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-color);">    
+                    <p><strong>Email:</strong> <a href="mailto:{{ profile.email }}">{{ profile.email }} | kaushalacharya16@gmail.com</a></p>
+                </div>
+
+                <div class="social-links">
+                    <a href="mailto:{{ profile.email }}" title="Email" aria-label="Email" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(37, 99, 235, 0.15); transition: all 0.3s;" onmouseover="this.style.background='rgba(37, 99, 235, 0.25)'" onmouseout="this.style.background='rgba(37, 99, 235, 0.15)'">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary-color);">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </a>
+                    <a href="{{ profile.linkedin }}" target="_blank" title="LinkedIn" aria-label="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(10, 102, 194, 0.15); transition: all 0.3s;" onmouseover="this.style.background='rgba(10, 102, 194, 0.25)'" onmouseout="this.style.background='rgba(10, 102, 194, 0.15)'">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: #0A66C2;">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                    <a href="{{ profile.github }}" target="_blank" title="GitHub" aria-label="GitHub" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(51, 51, 51, 0.15); transition: all 0.3s;" onmouseover="this.style.background='rgba(51, 51, 51, 0.25)'" onmouseout="this.style.background='rgba(51, 51, 51, 0.15)'">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: #333;">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    {% if profile.twitter %}
+                    <a href="{{ profile.twitter }}" target="_blank" title="Twitter" aria-label="Twitter" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 0, 0, 0.15); transition: all 0.3s;" onmouseover="this.style.background='rgba(0, 0, 0, 0.25)'" onmouseout="this.style.background='rgba(0, 0, 0, 0.15)'">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: #000;">
+                            <path d="M23.953 4.57a10 10 0 002.856-10.86 10.02 10.02 0 01-2.856 2.856c-.026 0-.033.007-.033.016v.5C21.149 15.395 17.55 19 13.5 19c-3.528 0-6.658-2.589-7.753-6a6.987 6.987 0 01-.722-2.237m8.752.049a4.994 4.994 0 01-8.752 4.72v.266C5.56 15.763 2.782 19.371.5 23.5a10.02 10.02 0 005.5-3.5c1.605 1.06 3.366 1.694 5.266 1.933-1.979 2.265-1.693 5.286 1.193 7.38 1.518 1.018 3.487.72 4.82-.431a9.998 9.998 0 002.857-2.856 10.02 10.02 0 01-2.857 2.856 10.02 10.02 0 01-2.857-2.856zm9.147-3.337c.556 2.447.556 5.06 0 7.507 1.89-2.148 2.996-5.041 2.996-8.253 0-.96-.154-1.92-.307-2.877a10.02 10.02 0 01-2.689 3.623z"/>
+                        </svg>
+                    </a>
+                    {% endif %}
+                </div>
+            </aside>
+
+            <div class="hero-copy" data-parallax="0.3" data-aos="fade-left">
+                <span class="eyebrow">Say Hello</span>
+                <h2>I'm {{ profile.name }}, <span class="typed-text" data-roles="Software Developer|Backend Developer|Data Analyst"></span></h2>
+                <p class="hero-description">I help teams and learners understand data through clear visuals, interactive interfaces, and intelligent web applications.</p>
+
+                <div class="hero-stats">
+                    <div class="stat-card" data-stat-value="11">
+                        <strong class="stat-number">11+</strong>
+                        <span>Featured Projects</span>
+                    </div>
+                    <div class="stat-card" data-stat-value="8">
+                        <strong class="stat-number">8+</strong>
+                        <span>Professional Roles</span>
+                    </div>
+                    <div class="stat-card" data-stat-value="18">
+                        <strong class="stat-number">18+</strong>
+                        <span>Certifications</span>
+                    </div>
+                    <div class="stat-card" data-stat-value="2">
+                        <strong class="stat-number">2+</strong>
+                        <span>Hackathons</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">About Me</h2>
+            <div class="card" data-aos="fade-up" data-aos-delay="100" style="padding: 2rem; line-height: 1.8; font-size: 1.1rem;" alighn="justify">
+                <p>I’m a Computer Science graduate from Nepal with a strong focus on building data-driven applications and intelligent systems. My work combines machine learning, backend development with Django, and responsive frontend design to create practical, user-centered solutions.I enjoy turning complex problems into simple, scalable products — whether it's developing real-time applications, designing intuitive interfaces, or experimenting with AI models. I’ve worked on projects ranging from chat applications to data-powered tools, and I’m continuously improving my skills in modern software development and machine learning.</p>
+                <br>
+                <p>My goal is to leverage AI to solve real-world problems and create impactful solutions. I’m actively working on projects that combine machine learning with practical applications, and I’m always eager to learn, experiment, and grow in the field of artificial intelligence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Education</h2>
+            <div class="projects-grid">
+                {% for edu in profile.education %}
+                <div class="card hover-shadow" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:0|stringformat:'d' }}00">
+                    <h3>{{ edu.degree }}</h3>
+                    <p>{{ edu.institution }}</p>
+                    <small>{{ edu.details }}</small>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Skills & Technologies</h2>
+            <div class="skills-grid">
+                {% for skill in skills %}
+                <div class="card skill-item" data-category="{{ skill.category }}" data-tilt data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:0|stringformat:'d' }}00">
+                    <h3 class="skill-name">{{ skill.name }}</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: {{ skill.proficiency }}%"></div>
+                    </div>
+                    <small>{{ skill.get_category_display }}</small>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                {% for project in projects %}
+                <div class="card project-card hover-lift" data-tilt data-aos="zoom-in" data-aos-delay="{{ forloop.counter|add:0|stringformat:'d' }}00">
+                    {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-image">
+                    {% elif project.title == 'Blog Nepal' %}
+                    <img src="{% static 'main/images/Blog Nepal.png' %}" alt="Blog Nepal" class="project-image">
+                    {% elif project.title == 'Weather-Detector' %}
+                    <img src="{% static 'main/images/weather detector.png' %}" alt="Weather-Detector" class="project-image">
+                    {% elif project.title == 'Booking System' %}
+                    <img src="{% static 'main/images/Booking System.png' %}" alt="Booking System" class="project-image">
+                    {% elif project.title == 'Real-Time Chat Application' %}
+                    <img src="{% static 'main/images/Chat application.png' %}" alt="Real-Time Chat Application" class="project-image">
+                    {% elif project.title == 'Inventory Management Software' %}
+                    <img src="{% static 'main/images/Inventory.png' %}" alt="Inventory Management Software" class="project-image">
+                    {% else %}
+                    <div class="project-image placeholder-image"></div>
+                    {% endif %}
+                    <div class="project-info">
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.description }}</p>
+                        {% if project.technologies %}
+                        <p><strong>Tech:</strong> {{ project.technologies }}</p>
+                        {% endif %}
+                        <div class="project-links">
+                            {% if project.link %}
+                            <a href="{{ project.link }}" class="btn" target="_blank">Live Demo</a>
+                            {% endif %}
+                            {% if project.github_link %}
+                            <a href="{{ project.github_link }}" class="btn" target="_blank">GitHub</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class=\"section experience-section\">
+        <div class="container">
+            <h2 data-aos="fade-up">Professional Experience</h2>
+            {% for experience in experiences %}
+            <div class="card" data-aos="fade-left" data-aos-delay="{{ forloop.counter|add:0|stringformat:'d' }}00">
+                <h3>{{ experience.position }} at {{ experience.company }}</h3>
+                <p class="date">{{ experience.start_date|date:"M Y" }} - {% if experience.current %}<span style="color: var(--primary-color);">Present</span>{% else %}{{ experience.end_date|date:"M Y" }}{% endif %}</p>
+                <p>{{ experience.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Research and Certifications Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Research Interests</h2>
+            <div class="projects-grid">
+                {% for interest in profile.research_interests %}
+                <div class="card hover-shadow" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:0|stringformat:'d' }}00">
+                    <p>{{ interest }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Certifications</h2>
+            <div class="projects-grid">
+                {% for certificate in profile.certifications %}
+                <div class="card hover-shadow" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:0|stringformat:'d' }}00">
+                    <p>{{ certificate }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Latest Blog Posts</h2>
+            <div class="projects-grid">
+                {% for blog in blogs %}
+                <div class="card hover-shadow" data-aos="fade-up" data-aos-delay="{{ forloop.counter|add:0|stringformat:'d' }}00">
+                    {% if blog.image %}
+                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                    {% else %}
+                    <div style="height: 200px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem;">
+                        📝
+                    </div>
+                    {% endif %}
+                    <div style="padding: 1rem;">
+                        <h3>{{ blog.title }}</h3>
+                        <p>{{ blog.excerpt|truncatewords:20 }}</p>
+                        <small>{{ blog.created_at|date:"M d, Y" }}</small>
+                        <br><br>
+                        <a href="{% url 'blog_detail' blog.slug %}" class="btn">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div style="text-align: center; margin-top: 2rem;" data-aos="fade-up">
+                <a href="#" class="btn">View All Posts</a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-form card" data-aos="zoom-in" style="max-width: 600px; margin: 0 auto;">
+                <form id="contact-form" method="post" action="/contact/">
+                    {% csrf_token %}
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                        <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: inherit;"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message ✉️</button>
+                </form>
+            </div>
+            
+            <!-- Social Links -->
+            <div style="text-align: center; margin-top: 3rem;" data-aos="fade-up">
+                <h3>Connect With Me</h3>
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                    <a href="mailto:{{ profile.email }}" style="text-decoration: none; transition: transform 0.3s;" class="hover-scale" title="Email" aria-label="Email">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="color: var(--primary-color);">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                    <a href="{{ profile.linkedin }}" target="_blank" style="text-decoration: none; transition: transform 0.3s;" class="hover-scale" title="LinkedIn" aria-label="LinkedIn">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="color: #0A66C2;">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                    <a href="{{ profile.github }}" target="_blank" style="text-decoration: none; transition: transform 0.3s;" class="hover-scale" title="GitHub" aria-label="GitHub">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="color: #333;">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    {% if profile.twitter %}
+                    <a href="{{ profile.twitter }}" target="_blank" style="text-decoration: none; transition: transform 0.3s;" class="hover-scale" title="Twitter" aria-label="Twitter">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="color: #000;">
+                            <path d="M23.953 4.57a10 10 0 002.856-10.86 10.02 10.02 0 01-2.856 2.856c-.026 0-.033.007-.033.016v.5C21.149 15.395 17.55 19 13.5 19c-3.528 0-6.658-2.589-7.753-6a6.987 6.987 0 01-.722-2.237m8.752.049a4.994 4.994 0 01-8.752 4.72v.266C5.56 15.763 2.782 19.371.5 23.5a10.02 10.02 0 005.5-3.5c1.605 1.06 3.366 1.694 5.266 1.933-1.979 2.265-1.693 5.286 1.193 7.38 1.518 1.018 3.487.72 4.82-.431a9.998 9.998 0 002.857-2.856 10.02 10.02 0 01-2.857 2.856 10.02 10.02 0 01-2.857-2.856zm9.147-3.337c.556 2.447.556 5.06 0 7.507 1.89-2.148 2.996-5.041 2.996-8.253 0-.96-.154-1.92-.307-2.877a10.02 10.02 0 01-2.689 3.623z"/>
+                        </svg>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 2rem; background-color: var(--card-bg); border-top: 1px solid var(--border-color); margin-top: 5rem;">
+        <p>&copy; {{ profile.name }}. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script>
+        window.USER_PROFILE = {
+            github: "{{ profile.github|escapejs }}"
+        };
+    </script>
+    <script src="{% static 'main/js/script.js' %}"></script>
+    <script src="{% static 'main/js/advanced.js' %}"></script>
+    <script src="{% static 'main/js/hero.js' %}"></script>
+    <script src="{% static 'main/js/mousetail.js' %}"></script>
+    <script src="{% static 'main/js/enhancements.js' %}"></script>
+    
+    <!-- Initialize Effects -->
+    <script>
+        // Particles.js
+        particlesJS.load('particles-js', '/static/main/js/particles-config.json', function() {
+            console.log('particles.js loaded');
+        });
+        
+        // Vanilla Tilt
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2
+        });
+
+        // GitHub API
+        const githubUrl = window.USER_PROFILE.github;
+        const username = githubUrl.split('/').pop();
+        fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`)
+            .then(response => response.json())
+            .then(data => {
+                const reposContainer = document.getElementById('github-repos');
+                data.forEach(repo => {
+                    const repoCard = document.createElement('div');
+                    repoCard.className = 'card project-card';
+                    repoCard.innerHTML = `
+                        <div class="project-info">
+                            <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                            <p>${repo.description || 'No description available'}</p>
+                            <p><strong>Language:</strong> ${repo.language || 'N/A'} | <strong>Stars:</strong> ${repo.stargazers_count}</p>
+                        </div>
+                    `;
+                    reposContainer.appendChild(repoCard);
+                });
+            })
+            .catch(error => console.error('Error fetching GitHub repos:', error));
+    </script>
+</body>
+</html>

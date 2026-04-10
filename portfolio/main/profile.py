@@ -1,0 +1,45 @@
+PROFILE = {
+    'name': 'Kaushal Acharya',
+    'title': 'Data Analyst & Software Developer',
+    'location': 'Bharatpur-12, Chitwan, Nepal',
+    'summary': 'A data-driven developer and academic instructor with experience in data analysis, machine learning, UI/UX design, and web development. I build interactive applications, dashboards, and polished user experiences for both learning and business systems.',
+    'email': 'kaushal.acharya1999@gmail.com',
+    'mobile': '+977-9867866025',
+    'linkedin': 'https://linkedin.com/in/kaushalacharya',
+    'github': 'https://github.com/Kaushal164',
+    'twitter': '',
+    'hero_summary': 'I build scalable web applications and smart systems using Python, Django, and machine learning to solve real-world problems.',
+    'profile_photo': '/static/main/images/profile.jpg',
+    'cv_file': '/static/main/resume/Kaushal_Acharya_Resume.pdf',
+    'education': [
+        {'institution': 'Birendra Multiple Campus, TU Nepal', 'degree': 'BSc CSIT', 'details': '72.64% | 2023'},
+        {'institution': 'SkyRider College Nepal', 'degree': '+2 Science', 'details': 'GPA 3.08 | 2018'},
+        {'institution': 'Sky Rider English Boarding HSS Nepal', 'degree': 'SLC', 'details': 'GPA 3.5 | 2016'},
+    ],
+    'research_interests': [
+        'Applied Machine Learning and Artificial Intelligence',
+        'Deep Learning Architectures and Neural Networks',
+        'Reinforcement Learning Systems',
+        'Educational Data Mining and AI-driven Learning Systems',
+        'Explainable and Human-Centered AI',
+        'Statistical Learning and Data-driven Modeling',
+        'Intelligent Web and Mobile-based Information Systems',
+        'AI-powered Decision Support Systems',
+        'Computational Approaches for Social Impact and Sustainable Development'
+    ],
+    'certifications': [
+        'Supervised Machine Learning: Regression and Classification (Coursera)',
+        'Unsupervised Learning, Recommenders, Reinforcement Learning (Coursera)',
+        'Machine Learning with Python (IBM)',
+        'Machine Learning (Coursera)',
+        'Advanced Learning Algorithms (Coursera)',
+        'Divide and Conquer, Sorting and Searching, and Randomized Algorithms (Coursera)',
+        'Data Analysis with Python (Cognitive Class)',
+        'Data Visualization Associate Early Internship (Saint Louis University)',
+        'Sr. Front-end Developer (BINET TECHNOLOGIES (Pvt.) Ltd.)',
+        'OSM HACKFEST 2023- CHITWAN REGION (Birendra Open Source Club)',
+        'Digital Marketing (Augusta Institute of Technology)'
+    ],
+    'initials': 'KA',
+    'copyright_year': '2026'
+}

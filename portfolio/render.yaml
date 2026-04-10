@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: kaushal-portfolio
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn portfolio.wsgi:application --bind 0.0.0.0:$PORT --log-file -"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: PYTHON_VERSION
+        value: "3.12.3"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "kaushalacharya.com.np,www.kaushalacharya.com.np"
+      - key: CSRF_TRUSTED_ORIGINS
+        value: "https://kaushalacharya.com.np,https://www.kaushalacharya.com.np"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://kaushalacharya.com.np,https://www.kaushalacharya.com.np"
+
