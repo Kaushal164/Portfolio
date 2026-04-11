@@ -39,8 +39,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://portfolio-6m4g.onrender.com'
 ]
 
-DEBUG = False
-
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
