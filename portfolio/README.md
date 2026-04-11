@@ -4,7 +4,7 @@ A modern, fully-featured portfolio website built with Django and featuring advan
 
 ## Features
 
-### ✨ Core Features
+### Core Features
 - **Hero Section** - Eye-catching introduction
 - **About Me** - Professional biography
 - **Skills Section** - Organized by category with proficiency levels
@@ -14,7 +14,7 @@ A modern, fully-featured portfolio website built with Django and featuring advan
 - **Contact Form** - Direct message functionality
 - **Resume/CV** - Downloadable PDF
 
-### 🎨 UI/UX Features
+### UI/UX Features
 - **Dark/Light Mode** - Toggle between themes
 - **Smooth Animations** - AOS (Animate On Scroll) library
 - **Responsive Design** - Mobile-first approach
@@ -22,7 +22,7 @@ A modern, fully-featured portfolio website built with Django and featuring advan
 - **Hover Effects** - Interactive elements
 - **Scroll Progress Bar** - Visual indication of page progress
 
-### 🔧 Technical Features
+### Technical Features
 - **REST API** - Django REST Framework endpoints
 - **Unit Tests** - Comprehensive test coverage
 - **Admin Panel** - Easy content management
