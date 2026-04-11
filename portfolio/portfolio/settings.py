@@ -30,13 +30,18 @@ def _default_allowed_hosts():
 DEBUG = config("DEBUG", default=False, cast=bool)
 SECRET_KEY = config("SECRET_KEY", default="unsafe-dev-secret-key")
 
-ALLOWED_HOSTS = config(
-    "ALLOWED_HOSTS",
-    default=",".join(_default_allowed_hosts()),
-    cast=Csv(),
-)
+ALLOWED_HOSTS = [
+    'portfolio-6m4g.onrender.com',
+    '.onrender.com',
+]
 
-CSRF_TRUSTED_ORIGINS = config("CSRF_TRUSTED_ORIGINS", default="", cast=Csv())
+CSRF_TRUSTED_ORIGINS = [
+    'https://portfolio-6m4g.onrender.com'
+]
+
+DEBUG = False
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
