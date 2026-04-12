@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ blog.title }} - {{ profile.name }}</title>
@@ -12,8 +13,8 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/static/main/css/style.css">
+    <!-- ✅ FIXED STATIC -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 </head>
 <body data-theme="light">
     <!-- Header -->
@@ -68,6 +69,8 @@
             once: true
         });
     </script>
-    <script src="/static/main/js/script.js"></script>
+
+    <!-- ✅ FIXED STATIC -->
+    <script src="{% static 'main/js/script.js' %}"></script>
 </body>
 </html>
