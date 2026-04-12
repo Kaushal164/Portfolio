@@ -379,9 +379,9 @@
     <!-- Initialize Effects -->
     <script>
         // Particles.js
-        particlesJS.load('particles-js', '/static/main/js/particles-config.json', function() {
-            console.log('particles.js loaded');
-        });
+        particlesJS.load('particles-js', "{% static 'main/js/particles-config.json' %}", function() {
+        console.log('particles.js loaded');
+    });
         
         // Vanilla Tilt
         VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
