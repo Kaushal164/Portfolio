@@ -31,12 +31,16 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 SECRET_KEY = config("SECRET_KEY", default="unsafe-dev-secret-key")
 
 ALLOWED_HOSTS = [
-    'portfolio-6m4g.onrender.com',
-    '.onrender.com',
+    "portfolio-gbcm.onrender.com",
+    "kaushalacharya.com.np",
+    "www.kaushalacharya.com.np"
+
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://portfolio-6m4g.onrender.com'
+    'https://portfolio-gbcm.onrender.com', 
+    "https://kaushalacharya.com.np",
+    "https://www.kaushalacharya.com.np"
 ]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
