@@ -79,50 +79,44 @@ class Command(BaseCommand):
             {
                 'company': 'Morgan International School Nepal',
                 'position': 'Lecturer',
-                'start_date': '2026-01-01',
+                'date': '2026',
                 'current': True,
                 'description': 'Teaching: Higher secondary courses in computer science, including programming and web development. Assessment: Designed exams, assignments, and supervised lab sessions. Instruction: Delivered engaging lectures and practical demonstrations.'
             },
             {
                 'company': 'Saint Louis University Remote',
                 'position': 'Data Analyst Associate Intern',
-                'start_date': '2025-01-01',
-                'end_date': '2025-12-31',
+                'date': '2025',
                 'description': 'Data Cleaning: Prepared raw datasets for analysis. Visualization: Built dashboards using Excel, Power BI and Tableau. EDA: Conducted exploratory data analysis and presented insights. Reporting: Created final reports and presentation materials.'
             },
             {
                 'company': 'Augusta Institute of Technology Nepal',
                 'position': 'IT Instructor',
-                'start_date': '2025-01-01',
-                'end_date': '2025-12-31',
+                'date': '2025',
                 'description': 'Training: Coached newly-hired IT specialists on advanced technical procedures. Support: Assisted clients with diagnosis of software and hardware issues and concerns.'
             },
             {
                 'company': 'BINET Technologies Pvt. Ltd. Nepal',
                 'position': 'Sr. Front-End Developer (Intern)',
-                'start_date': '2024-01-01',
-                'end_date': '2024-12-31',
+                'date': '2024',
                 'description': 'Web Development: Developed responsive jewelry website using React, HTML, CSS and JavaScript. Features: Implemented product zoom, 360° views and chat using Socket.io for real-time communication.'
             },
             {
                 'company': 'OSM HACKFEST 2023- CHITWAN REGION Nepal',
                 'position': 'Hackathon (Participant)',
-                'start_date': '2023-01-01',
-                'end_date': '2023-12-31',
+                'date': '2023',
                 'description': 'Mobile Development: Developed a prototype using OpenStreetMap data to identify and visualize accident-prone areas in React Native. Design: UI/UX design to showing Open Street Map using Figma.'
             },
             {
                 'company': 'Digital Yeti Pvt. Ltd. Nepal',
                 'position': 'Web Developer (Trainee)',
-                'start_date': '2023-01-01',
-                'end_date': '2023-12-31',
+                'date': '2023',
                 'description': 'Frontend Development: Collaborated with UI designer to build a Gym website frontend using Bootstrap and implemented DOM manipulation for interactive features. React Development: Integrated Axios for API communication and utilized React Hooks for state management. Mobile Development: Developed and maintained mobile applications using React Native.'
             },
             {
                 'company': 'Augusta Institute of Technology Nepal',
                 'position': 'Digital Marketing',
-                'start_date': '2021-01-01',
-                'end_date': '2021-12-31',
+                'date': '2021',
                 'description': 'Professional Training: Gained hands-on knowledge in Digital Marketing, Website Planning and Development, UI/UX design, SEO, Web Analytics, SEM, Social Media Marketing, CRO, AdSense, Blogging, Affiliate Marketing, and Managerial Skills.'
             },
         ]
