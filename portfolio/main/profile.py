@@ -41,5 +41,5 @@ PROFILE = {
         'Digital Marketing (Augusta Institute of Technology)'
     ],
     'initials': 'KA',
-    'copyright_year': '2026'
+    'copyright_year': '2024'
 }
