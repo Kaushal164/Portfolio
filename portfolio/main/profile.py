@@ -4,7 +4,6 @@ PROFILE = {
     'location': 'Bharatpur-12, Chitwan, Nepal',
     'summary': 'A data-driven developer and academic instructor with experience in data analysis, machine learning, UI/UX design, and web development. I build interactive applications, dashboards, and polished user experiences for both learning and business systems.',
     'email': 'kaushal.acharya1999@gmail.com',
-    'mobile': '+977-9867866025',
     'linkedin': 'https://linkedin.com/in/kaushalacharya',
     'github': 'https://github.com/Kaushal164',
     'twitter': '',
