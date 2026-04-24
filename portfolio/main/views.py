@@ -72,7 +72,7 @@ def contact(request):
             message=message
         )
         
-        # Send email
+       
         try:
             send_mail(
                 f"Portfolio Contact: {subject}",
@@ -87,12 +87,12 @@ def contact(request):
         
     return JsonResponse({'success': False, 'message': 'Invalid request method.'})
 
-# Blog detail view
+
 def blog_detail(request, slug):
     blog = Blog.objects.get(slug=slug, published=True)
     return render(request, 'blog_detail.html', {'blog': blog, 'profile': PROFILE})
 
-# Resume PDF view
+
 def resume_pdf(request):
     from django.http import FileResponse
     import os
