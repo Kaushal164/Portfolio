@@ -1,121 +1,232 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaushal Acharya | Software Developer & Data Analyst</title>
-    <meta name="description" content="Portfolio of Kaushal Acharya - Software Developer, Data Analyst, and ML Enthusiast from Nepal.">
-    <meta name="keywords" content="Kaushal Acharya, Software Developer, Data Analyst, Machine Learning, Portfolio, Nepal">
+    <meta name="description" content="Ultra-premium portfolio of Kaushal Acharya - Full Stack Developer, Data Analyst & ML Enthusiast building impactful digital experiences.">
+    <meta name="keywords" content="Kaushal Acharya, Software Developer, Data Analyst, Machine Learning, Nepal, Portfolio">
+    <meta property="og:title" content="Kaushal Acharya | Developer Portfolio">
+    <meta property="og:description" content="Full Stack Developer & Data Analyst crafting digital experiences">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kaushalacharya.com.np">
+    <link rel="canonical" href="https://www.kaushalacharya.com.np">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">KA</div>
+            <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+            <div class="loader-text">Initializing experience...</div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating Particles Background -->
+    <canvas id="particlesCanvas"></canvas>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
-        <a href="#hero" class="nav-logo">
-            <span class="logo-text">&lt; Kaushal Acharya /&gt;</span>
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experiences</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <i class="fas fa-sun"></i>
-        </button>
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>KA<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-glow"></div>
+        </div>
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Hi all, I'm <span class="highlight">Kaushal</span></h1>
-                <p class="hero-description">A passionate Software Developer & Data Analyst with proven experience building production systems. Specialized in full-stack development, data analytics, machine learning, and scalable application design. Demonstrated success delivering cross-platform web and mobile applications.</p>
-                <div class="hero-social">
-                    <a href="https://linkedin.com/in/kaushalacharya" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:kaushal.acharya1999@gmail.com" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="#" class="social-icon education-icon"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://github.com/Kaushal164" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for opportunities</span>
                 </div>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">CONTACT ME</a>
-                    <a href="portfolio/main/static/main/resume/Kaushal_Acharya_Resume.pdf" download class="btn btn-secondary">DOWNLOAD MY RESUME</a>
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name">Kaushal Acharya</span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="role-prefix">I build</span>
+                    <span class="role-text" id="roleText">Digital Experiences</span>
+                    <span class="role-cursor">|</span>
+                </div>
+                <p class="hero-desc">Full Stack Developer & Data Analyst passionate about crafting immersive web applications, data-driven insights, and intelligent systems that make an impact.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary"><span>View Projects</span><i class="fas fa-arrow-right"></i></a>
+                    <a href="portfolio/main/static/main/resume/Kaushal_Acharya_Resume.pdf" download class="btn-secondary"><span>Download CV</span><i class="fas fa-download"></i></a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Kaushal164" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/kaushalacharya" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:kaushal.acharya1999@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="image-placeholder">
-                    <i class="fas fa-user-circle"></i>
+            <div class="hero-visual">
+                <div class="hero-avatar">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-inner">KA</div>
+                </div>
+                <div class="floating-elements">
+                    <div class="float-el float-1"><i class="fab fa-react"></i></div>
+                    <div class="float-el float-2"><i class="fab fa-python"></i></div>
+                    <div class="float-el float-3"><i class="fas fa-brain"></i></div>
+                    <div class="float-el float-4"><i class="fas fa-database"></i></div>
+                    <div class="float-el float-5"><i class="fab fa-js"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">A passionate <span class="text-gradient">Computer Science graduate</span> from Birendra Multiple Campus, TU with a relentless drive for building impactful digital solutions.</p>
+                    <p>I specialize in full-stack web development, data analytics, and machine learning. With experience spanning from responsive front-end interfaces to powerful data pipelines, I transform complex problems into elegant, user-friendly applications.</p>
+                    <p>Currently exploring the intersection of AI and web technologies to create intelligent systems that serve communities across Nepal and beyond.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Work Experiences</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="11">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="7">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="section" id="skills">
+    <section class="section section-alt" id="skills">
         <div class="section-container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-marquee">
+                <div class="marquee-track">
+                    <div class="marquee-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="marquee-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="marquee-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="marquee-item"><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="marquee-item"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="marquee-item"><i class="fab fa-java"></i><span>Java</span></div>
+                    <div class="marquee-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                    <div class="marquee-item"><i class="fas fa-brain"></i><span>ML</span></div>
+                    <div class="marquee-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+                    <div class="marquee-item"><i class="fas fa-chart-bar"></i><span>Power BI</span></div>
+                    <div class="marquee-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    <div class="marquee-item"><i class="fab fa-node-js"></i><span>Django</span></div>
+                    <div class="marquee-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="marquee-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="marquee-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="marquee-item"><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="marquee-item"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="marquee-item"><i class="fab fa-java"></i><span>Java</span></div>
+                </div>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Programming</h3>
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend Development</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">SQL</span>
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Bootstrap</span><span>Tailwind</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Machine Learning</h3>
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend & Database</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Supervised Learning</span>
-                        <span class="skill-tag">Unsupervised Learning</span>
-                        <span class="skill-tag">ANN</span>
-                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span>Python</span><span>Django</span><span>SQL</span><span>REST APIs</span><span>WebSocket</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                    <h3>Tools</h3>
+                <div class="skill-card" data-category="ml">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning & AI</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">VS Code</span>
+                        <span>Supervised Learning</span><span>Unsupervised</span><span>ANN</span><span>Reinforcement Learning</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>Technical</h3>
+                <div class="skill-card" data-category="data">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data & Analytics</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Data Analysis</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">Database Management</span>
-                        <span class="skill-tag">Algorithms</span>
+                        <span>Data Analysis</span><span>Visualization</span><span>Power BI</span><span>Excel</span><span>Tableau</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="skill-icon"><i class="fas fa-users"></i></div>
-                    <h3>Soft Skills</h3>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools & Design</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Teaching</span>
-                        <span class="skill-tag">Academic Writing</span>
-                        <span class="skill-tag">Problem Solving</span>
-                        <span class="skill-tag">Critical Thinking</span>
+                        <span>Figma</span><span>Git</span><span>VS Code</span><span>UI/UX</span><span>SEO</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="mobile">
+                    <div class="skill-card-glow"></div>
+                    <div class="skill-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile Development</h3>
+                    <div class="skill-tags">
+                        <span>React Native</span><span>Cross-Platform</span><span>Responsive</span>
                     </div>
                 </div>
             </div>
@@ -123,93 +234,74 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="section section-alt" id="experience">
+    <section class="section" id="experience">
         <div class="section-container">
-            <h2 class="section-title">Experience</h2>
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Data Analyst Associate Intern</h3>
-                            <span class="timeline-date">2025 | Remote</span>
-                        </div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta"><span class="timeline-date">2025</span><span class="timeline-location">Remote</span></div>
+                        <h3>Data Analyst Associate Intern</h3>
                         <h4>Saint Louis University</h4>
                         <ul>
-                            <li>Data Cleaning: Prepared raw datasets for analysis.</li>
-                            <li>Visualization: Built dashboards using Excel, Power BI and Tableau.</li>
-                            <li>EDA: Conducted exploratory data analysis and presented insights.</li>
-                            <li>Reporting: Created final reports and presentation materials.</li>
+                            <li>Prepared raw datasets for analysis through data cleaning processes</li>
+                            <li>Built dashboards using Excel, Power BI and Tableau</li>
+                            <li>Conducted exploratory data analysis and presented insights</li>
+                            <li>Created final reports and presentation materials</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>IT Instructor</h3>
-                            <span class="timeline-date">2025 | Nepal</span>
-                        </div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta"><span class="timeline-date">2025</span><span class="timeline-location">Nepal</span></div>
+                        <h3>IT Instructor</h3>
                         <h4>Augusta Institute of Technology</h4>
                         <ul>
-                            <li>Training: Coached newly-hired IT specialists on advanced technical procedures.</li>
-                            <li>Support: Assisted clients with diagnosis of software and hardware issues.</li>
+                            <li>Coached newly-hired IT specialists on advanced technical procedures</li>
+                            <li>Assisted clients with diagnosis of software and hardware issues</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Sr. Front-End Developer (Intern)</h3>
-                            <span class="timeline-date">2024 | Nepal</span>
-                        </div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta"><span class="timeline-date">2024</span><span class="timeline-location">Nepal</span></div>
+                        <h3>Sr. Front-End Developer (Intern)</h3>
                         <h4>BINET Technologies Pvt. Ltd.</h4>
                         <ul>
-                            <li>Web Development: Developed responsive jewelry website using React, HTML, CSS and JavaScript.</li>
-                            <li>Features: Implemented product zoom, 360 views and chat using Socket.io for real-time communication.</li>
+                            <li>Developed responsive jewelry website using React, HTML, CSS and JavaScript</li>
+                            <li>Implemented product zoom, 360° views and real-time chat using Socket.io</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Hackathon Participant</h3>
-                            <span class="timeline-date">2023 | Nepal</span>
-                        </div>
-                        <h4>OSM HACKFEST 2023 - CHITWAN REGION</h4>
-                        <ul>
-                            <li>Mobile Development: Developed prototype using OpenStreetMap data for accident-prone area visualization in React Native.</li>
-                            <li>Design: UI/UX design for Open Street Map using Figma.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Web Developer (Trainee)</h3>
-                            <span class="timeline-date">2023 | Nepal</span>
-                        </div>
+                    <div class="timeline-card">
+                        <div class="timeline-meta"><span class="timeline-date">2023</span><span class="timeline-location">Nepal</span></div>
+                        <h3>Web Developer (Trainee)</h3>
                         <h4>Digital Yeti Pvt. Ltd.</h4>
                         <ul>
-                            <li>Frontend: Built Gym website frontend using Bootstrap with DOM manipulation.</li>
-                            <li>React: Integrated Axios for API communication, React Hooks for state management.</li>
-                            <li>Mobile: Developed and maintained mobile applications using React Native.</li>
+                            <li>Built Gym website frontend using Bootstrap with DOM manipulation</li>
+                            <li>Integrated Axios for API communication, React Hooks for state management</li>
+                            <li>Developed and maintained mobile applications using React Native</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Digital Marketing Trainee</h3>
-                            <span class="timeline-date">2021 | Nepal</span>
-                        </div>
-                        <h4>Augusta Institute of Technology</h4>
+                    <div class="timeline-card">
+                        <div class="timeline-meta"><span class="timeline-date">2023</span><span class="timeline-location">Nepal</span></div>
+                        <h3>Hackathon Participant</h3>
+                        <h4>OSM HACKFEST 2023 - Chitwan Region</h4>
                         <ul>
-                            <li>Professional Training: Digital Marketing, Website Planning, UI/UX, SEO, Web Analytics, SEM, Social Media Marketing, CRO, AdSense, Blogging.</li>
+                            <li>Developed React Native prototype for accident-prone area visualization</li>
+                            <li>UI/UX design for OpenStreetMap using Figma</li>
                         </ul>
                     </div>
                 </div>
@@ -218,183 +310,119 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="section" id="projects">
+    <section class="section section-alt" id="projects">
         <div class="section-container">
-            <h2 class="section-title">Projects</h2>
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card-icon"><i class="fas fa-blog"></i></div>
-                    <h3>Blog Nepal</h3>
-                    <span class="project-tech">Django</span>
-                    <p>Full-stack blog with CRUD operations, Django admin integration, dynamic content rendering, and mobile-responsive UI.</p>
+                <div class="project-card project-featured">
+                    <div class="project-card-bg"></div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-blog"></i></div>
+                        <h3>Blog Nepal</h3>
+                        <p>Full-stack blog application with CRUD operations, Django admin integration, dynamic content rendering, and mobile-responsive UI.</p>
+                        <div class="project-tags"><span>Django</span><span>Python</span><span>HTML/CSS</span><span>SQLite</span></div>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-icon"><i class="fas fa-car"></i></div>
-                    <h3>SafeDriveNepal</h3>
-                    <span class="project-tech">React Native</span>
-                    <p>App to identify risky road areas using map data. Designed UI/UX and data visualizations using Figma.</p>
+                    <div class="project-card-bg"></div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-car-crash"></i></div>
+                        <h3>SafeDriveNepal</h3>
+                        <p>Mobile app to identify risky road areas using OpenStreetMap data with UI/UX visualizations designed in Figma.</p>
+                        <div class="project-tags"><span>React Native</span><span>Figma</span><span>Maps</span></div>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Food Delivery App</h3>
-                    <span class="project-tech">React.js</span>
-                    <p>Frontend with API integration, cart management and delivery functionality.</p>
+                    <div class="project-card-bg"></div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Food Delivery App</h3>
+                        <p>Frontend application with API integration, cart management and delivery tracking functionality.</p>
+                        <div class="project-tags"><span>React.js</span><span>API</span><span>State Mgmt</span></div>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-card-icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>Booking System</h3>
-                    <span class="project-tech">Django</span>
-                    <p>Booking system with user authentication, CRUD operations, and interactive dashboard for resource allocation.</p>
+                    <div class="project-card-bg"></div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h3>Booking System</h3>
+                        <p>Django web app with user authentication, CRUD operations, and an interactive dashboard for resource allocation.</p>
+                        <div class="project-tags"><span>Django</span><span>Auth</span><span>Dashboard</span></div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-card-icon"><i class="fas fa-comments"></i></div>
-                    <h3>Real-Time Chat App</h3>
-                    <span class="project-tech">Django + WebSocket</span>
-                    <p>Real-time messaging with user authentication, WebSocket-based communication, and responsive UI.</p>
+                <div class="project-card project-featured">
+                    <div class="project-card-bg"></div>
+                    <div class="project-content">
+                        <div class="project-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Real-Time Chat Application</h3>
+                        <p>Real-time messaging platform with user authentication, WebSocket-based communication, and responsive UI.</p>
+                        <div class="project-tags"><span>Django</span><span>WebSocket</span><span>Real-time</span><span>Auth</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
-    <section class="section section-alt" id="certifications">
+    <section class="section" id="certifications">
         <div class="section-container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Supervised Machine Learning: Regression and Classification</h4>
-                    <span class="cert-issuer">Coursera</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Unsupervised Learning, Recommenders, Reinforcement Learning</h4>
-                    <span class="cert-issuer">Coursera</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Machine Learning with Python</h4>
-                    <span class="cert-issuer">IBM</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Machine Learning</h4>
-                    <span class="cert-issuer">Coursera</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Advanced Learning Algorithms</h4>
-                    <span class="cert-issuer">Coursera</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Divide and Conquer, Sorting and Searching, Randomized Algorithms</h4>
-                    <span class="cert-issuer">Coursera</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Data Analysis with Python</h4>
-                    <span class="cert-issuer">Cognitive Class</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Data Visualization Associate Early Internship</h4>
-                    <span class="cert-issuer">Saint Louis University</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Sr. Front-end Developer</h4>
-                    <span class="cert-issuer">BINET Technologies</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>OSM HACKFEST 2023 - CHITWAN REGION</h4>
-                    <span class="cert-issuer">Birendra Open Source Club</span>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-certificate cert-icon"></i>
-                    <h4>Digital Marketing</h4>
-                    <span class="cert-issuer">Augusta Institute of Technology</span>
-                </div>
+            <div class="section-header">
+                <span class="section-tag">05</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
             </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section class="section" id="research">
-        <div class="section-container">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="research-grid">
-                <div class="research-card"><i class="fas fa-flask"></i><span>Machine Learning</span></div>
-                <div class="research-card"><i class="fas fa-network-wired"></i><span>Deep Learning</span></div>
-                <div class="research-card"><i class="fas fa-lightbulb"></i><span>Explainable AI</span></div>
-                <div class="research-card"><i class="fas fa-graduation-cap"></i><span>Educational Data Mining</span></div>
-                <div class="research-card"><i class="fas fa-robot"></i><span>Intelligent Systems</span></div>
-                <div class="research-card"><i class="fas fa-hands-helping"></i><span>AI for Social Impact</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section class="section section-alt" id="resume">
-        <div class="section-container">
-            <h2 class="section-title">Resume</h2>
-            <div class="resume-section">
-                <div class="resume-icon"><i class="fas fa-file-pdf"></i></div>
-                <h3>Kaushal Acharya</h3>
-                <p>Software Developer | Data Analyst | ML Enthusiast</p>
-                <a href="portfolio/main/static/main/resume/Kaushal_Acharya_Resume.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+            <div class="certs-grid">
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Supervised Machine Learning</h4><span>Coursera</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Unsupervised Learning & RL</h4><span>Coursera</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>ML with Python</h4><span>IBM</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Advanced Learning Algorithms</h4><span>Coursera</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Algorithms (Stanford)</h4><span>Coursera</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Data Analysis with Python</h4><span>Cognitive Class</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Data Visualization Intern</h4><span>Saint Louis University</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>Sr. Front-end Developer</h4><span>BINET Technologies</span></div>
+                <div class="cert-card"><div class="cert-icon"><i class="fas fa-award"></i></div><h4>OSM HACKFEST 2023</h4><span>Birendra Open Source Club</span></div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact">
+    <section class="section section-alt" id="contact">
         <div class="section-container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-grid">
-                <a href="mailto:kaushal.acharya1999@gmail.com" class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>kaushal.acharya1999@gmail.com</p>
-                    </div>
-                </a>
-                <a href="tel:+9779867866025" class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+977-9867866025</p>
-                    </div>
-                </a>
-                <a href="https://linkedin.com/in/kaushalacharya" target="_blank" class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <div>
-                        <h4>LinkedIn</h4>
-                        <p>linkedin.com/in/kaushalacharya</p>
-                    </div>
-                </a>
-                <a href="https://github.com/Kaushal164" target="_blank" class="contact-card">
-                    <i class="fab fa-github"></i>
-                    <div>
-                        <h4>GitHub</h4>
-                        <p>github.com/Kaushal164</p>
-                    </div>
-                </a>
-                <a href="https://www.kaushalacharya.com.np" target="_blank" class="contact-card">
-                    <i class="fas fa-globe"></i>
-                    <div>
-                        <h4>Website</h4>
-                        <p>www.kaushalacharya.com.np</p>
-                    </div>
-                </a>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Bharatpur-12, Chitwan, Nepal</p>
+            <div class="section-header">
+                <span class="section-tag">06</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-desc">I'm currently open to new opportunities. Whether you have a project, a question, or just want to say hi, my inbox is always open.</p>
+                    <div class="contact-links">
+                        <a href="mailto:kaushal.acharya1999@gmail.com" class="contact-link"><i class="fas fa-envelope"></i><span>kaushal.acharya1999@gmail.com</span></a>
+                        <a href="tel:+9779867866025" class="contact-link"><i class="fas fa-phone"></i><span>+977-9867866025</span></a>
+                        <a href="https://linkedin.com/in/kaushalacharya" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i><span>linkedin.com/in/kaushalacharya</span></a>
+                        <a href="https://github.com/Kaushal164" target="_blank" class="contact-link"><i class="fab fa-github"></i><span>github.com/Kaushal164</span></a>
+                        <div class="contact-link"><i class="fas fa-map-marker-alt"></i><span>Bharatpur-12, Chitwan, Nepal</span></div>
                     </div>
                 </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn-primary"><span>Send Message</span><i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
     </section>
@@ -402,59 +430,50 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2025 Kaushal Acharya. All rights reserved.</p>
-            <div class="footer-links">
+            <div class="footer-brand">
+                <span class="logo-bracket">&lt;</span>Kaushal Acharya<span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-text">Crafting digital experiences from Nepal to the world.</p>
+            <div class="footer-social">
                 <a href="https://github.com/Kaushal164" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/kaushalacharya" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://linkedin.com/in/kaushalacharya" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <a href="mailto:kaushal.acharya1999@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
+            <p class="footer-copy">&copy; 2025 Kaushal Acharya. All rights reserved.</p>
         </div>
+        <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
     </footer>
 
-    <!-- AI Chatbox Toggle -->
-    <div class="chatbox-toggle" id="chatboxToggle">
+    <!-- AI Assistant -->
+    <div class="ai-toggle" id="aiToggle">
+        <div class="ai-pulse"></div>
         <i class="fas fa-robot"></i>
-        <span class="chat-notification">1</span>
     </div>
-
-    <!-- AI Chatbox -->
-    <div class="chatbox" id="chatbox">
-        <div class="chatbox-header">
-            <div class="chatbox-avatar">KA</div>
-            <div class="chatbox-info">
-                <span class="chatbox-name">Kaushal's Assistant</span>
-                <span class="chatbox-status"><span class="status-dot"></span> Online</span>
-            </div>
-            <button class="chatbox-close" id="chatboxClose"><i class="fas fa-times"></i></button>
+    <div class="ai-panel" id="aiPanel">
+        <div class="ai-header">
+            <div class="ai-avatar"><span>KA</span><div class="ai-status"></div></div>
+            <div class="ai-info"><span class="ai-name">Kaushal's AI</span><span class="ai-online">Online</span></div>
+            <button class="ai-close" id="aiClose"><i class="fas fa-times"></i></button>
         </div>
-        <div class="chatbox-messages" id="chatboxMessages">
-            <div class="chat-message bot">
-                <div class="message-content">
-                    <p>Hi! I'm Kaushal's AI Assistant. I can help you with:</p>
-                    <ul>
-                        <li>Skills & Technologies</li>
-                        <li>Education & Research</li>
-                        <li>Location & Experience</li>
-                        <li>Projects & Certifications</li>
-                        <li>Contact Information</li>
-                    </ul>
-                    <p>Feel free to ask me anything!</p>
-                </div>
-                <span class="message-time"></span>
+        <div class="ai-messages" id="aiMessages">
+            <div class="ai-msg bot">
+                <div class="ai-msg-content">Hey! I'm Kaushal's AI assistant. Ask me about his skills, projects, experience, or anything else. Try the suggestions below!</div>
+                <span class="ai-msg-time"></span>
             </div>
         </div>
-        <div class="chatbox-suggestions">
-            <button class="suggestion-btn" data-query="What are your skills?">What are your skills?</button>
-            <button class="suggestion-btn" data-query="Tell me about your experience">Tell me about your experience</button>
-            <button class="suggestion-btn" data-query="What projects have you built?">What projects have you built?</button>
-            <button class="suggestion-btn" data-query="Where are you located?">Where are you located?</button>
+        <div class="ai-suggestions">
+            <button class="ai-suggestion" data-q="What are your skills?">Skills</button>
+            <button class="ai-suggestion" data-q="Tell me about your projects">Projects</button>
+            <button class="ai-suggestion" data-q="What's your experience?">Experience</button>
+            <button class="ai-suggestion" data-q="How can I contact you?">Contact</button>
+            <button class="ai-suggestion" data-q="Tell me about your education">Education</button>
         </div>
-        <div class="chatbox-input-area">
-            <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Ask me anything..." autocomplete="off">
-            <button class="chatbox-send" id="chatboxSend"><i class="fas fa-paper-plane"></i></button>
+        <div class="ai-input-area">
+            <input type="text" class="ai-input" id="aiInput" placeholder="Ask me anything..." autocomplete="off">
+            <button class="ai-send" id="aiSend"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
