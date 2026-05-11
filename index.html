@@ -1,456 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaushal Acharya | Software Developer & Data Analyst</title>
     <meta name="description" content="Portfolio of Kaushal Acharya - Software Developer, Data Analyst, and ML Enthusiast from Nepal.">
     <meta name="keywords" content="Kaushal Acharya, Software Developer, Data Analyst, Machine Learning, Portfolio, Nepal">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
-        <div class="nav-brand">
-            <span class="nav-logo">&gt;_</span>
-            <span class="nav-name">Kaushal Acharya</span>
-        </div>
+        <a href="#hero" class="nav-logo">
+            <span class="logo-text">&lt; Kaushal Acharya /&gt;</span>
+        </a>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
+            <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#about" data-cmd="about">About</a></li>
-            <li><a href="#skills" data-cmd="skills">Skills</a></li>
-            <li><a href="#experience" data-cmd="experience">Experience</a></li>
-            <li><a href="#projects" data-cmd="projects">Projects</a></li>
-            <li><a href="#certifications" data-cmd="certifications">Certifications</a></li>
-            <li><a href="#resume" data-cmd="resume">Resume</a></li>
-            <li><a href="#contact" data-cmd="contact">Contact</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experiences</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact Me</a></li>
         </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
     </nav>
 
-    <!-- Main Terminal Container -->
-    <main class="container">
-        <!-- Hero Terminal -->
-        <section class="terminal hero-terminal" id="hero">
-            <div class="terminal-header">
-                <div class="buttons">
-                    <div class="button red"></div>
-                    <div class="button yellow"></div>
-                    <div class="button green"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi all, I'm <span class="highlight">Kaushal</span></h1>
+                <p class="hero-description">A passionate Software Developer & Data Analyst with proven experience building production systems. Specialized in full-stack development, data analytics, machine learning, and scalable application design. Demonstrated success delivering cross-platform web and mobile applications.</p>
+                <div class="hero-social">
+                    <a href="https://linkedin.com/in/kaushalacharya" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:kaushal.acharya1999@gmail.com" class="social-icon email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="social-icon education-icon"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://github.com/Kaushal164" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
-                <div class="title">guest@terminal.portfolio</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="boot-sequence">
-                    <p class="boot-line">[✓] Establishing secure connection...</p>
-                    <p class="boot-line"><span class="cmd-highlight">user@localhost:~$</span> ssh guest@terminal.portfolio</p>
-                    <p class="boot-line">Session started: <span id="sessionTime"></span></p>
-                    <p class="boot-line">Terminal ready for commands...</p>
-                </div>
-                <div class="binary-strip">10101100110010111110101011000111001101011010100111010111010011101001100111011010100010111010100001000011101000111010100101100011101100011111001111111110001</div>
-                <div class="ascii-art" id="asciiArt"></div>
-                <div class="welcome-box">
-                    <p>Welcome to my interactive terminal portfolio! Type 'help' to see available commands. Happy exploring, fellow developer!</p>
-                </div>
-                <div class="interactive-terminal" id="interactiveTerminal">
-                    <div class="terminal-output" id="terminalOutput"></div>
-                    <div class="terminal-input-line">
-                        <span class="input-prompt">guest@terminal:~/portfolio$</span>
-                        <input type="text" class="terminal-input" id="terminalInput" autocomplete="off" spellcheck="false" placeholder="Type a command...">
-                    </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">CONTACT ME</a>
+                    <a href="portfolio/main/static/main/resume/Kaushal_Acharya_Resume.pdf" download class="btn btn-secondary">DOWNLOAD MY RESUME</a>
                 </div>
             </div>
-        </section>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section class="terminal" id="about">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">cat about.txt</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">cat about.txt</span></div>
-                <div class="output">
-<span class="highlight-name">Kaushal Acharya</span>
-Software Developer | Data Analyst | ML Enthusiast
-
-BSc CSIT Graduate passionate about web development, data analytics,
-machine learning, and building impactful full-stack applications.
-
-<span class="info-label">Location:</span> Bharatpur-12, Chitwan, Nepal
-<span class="info-label">Email:</span> kaushal.acharya1999@gmail.com
-<span class="info-label">Phone:</span> +977-9867866025
-<span class="info-label">Website:</span> www.kaushalacharya.com.np
-<span class="info-label">GitHub:</span> github.com/Kaushal164
-<span class="info-label">LinkedIn:</span> linkedin.com/in/kaushalacharya
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="terminal" id="education">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">cat education.json</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">cat education.json</span></div>
-                <div class="education-cards">
-                    <div class="edu-card">
-                        <div class="edu-degree">BSc CSIT</div>
-                        <div class="edu-school">Birendra Multiple Campus, TU</div>
-                        <div class="edu-details">Percentage: 72.64% | Nepal | 2023</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-degree">+2 Science</div>
-                        <div class="edu-school">SkyRider College</div>
-                        <div class="edu-details">GPA: 3.08 | Nepal | 2018</div>
-                    </div>
-                    <div class="edu-card">
-                        <div class="edu-degree">SLC</div>
-                        <div class="edu-school">Sky Rider English Boarding HSS</div>
-                        <div class="edu-details">GPA: 3.5 | Nepal | 2016</div>
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="section-container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="terminal" id="skills">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">ls skills/</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">ls -la skills/</span></div>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="category-title"><i class="fas fa-code"></i> Programming</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">SQL</span>
-                        </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Supervised Learning</span>
+                        <span class="skill-tag">Unsupervised Learning</span>
+                        <span class="skill-tag">ANN</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
                     </div>
-                    <div class="skill-category">
-                        <div class="category-title"><i class="fas fa-brain"></i> Machine Learning</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Supervised Learning</span><span class="skill-tag">Unsupervised Learning</span><span class="skill-tag">ANN</span><span class="skill-tag">Reinforcement Learning</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
                     </div>
-                    <div class="skill-category">
-                        <div class="category-title"><i class="fas fa-tools"></i> Tools</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Figma</span><span class="skill-tag">Power BI</span><span class="skill-tag">Excel</span><span class="skill-tag">Git</span><span class="skill-tag">VS Code</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Technical</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Database Management</span>
+                        <span class="skill-tag">Algorithms</span>
                     </div>
-                    <div class="skill-category">
-                        <div class="category-title"><i class="fas fa-database"></i> Technical</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Data Analysis</span><span class="skill-tag">Data Visualization</span><span class="skill-tag">Database Management</span><span class="skill-tag">Algorithms</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="category-title"><i class="fas fa-users"></i> Soft Skills</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Teaching</span><span class="skill-tag">Academic Writing</span><span class="skill-tag">Problem Solving</span><span class="skill-tag">Critical Thinking</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon"><i class="fas fa-users"></i></div>
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Teaching</span>
+                        <span class="skill-tag">Academic Writing</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Critical Thinking</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Experience Section -->
-        <section class="terminal" id="experience">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">cat experience.log</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">cat experience.log --reverse</span></div>
-                <div class="experience-timeline">
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-role">Data Analyst Associate Intern</div>
-                            <div class="exp-date">2025 | Remote</div>
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="section-container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Data Analyst Associate Intern</h3>
+                            <span class="timeline-date">2025 | Remote</span>
                         </div>
-                        <div class="exp-company">Saint Louis University</div>
-                        <div class="exp-details">
-                            <p>> Data Cleaning: Prepared raw datasets for analysis.</p>
-                            <p>> Visualization: Built dashboards using Excel, Power BI and Tableau.</p>
-                            <p>> EDA: Conducted exploratory data analysis and presented insights.</p>
-                            <p>> Reporting: Created final reports and presentation materials.</p>
-                        </div>
+                        <h4>Saint Louis University</h4>
+                        <ul>
+                            <li>Data Cleaning: Prepared raw datasets for analysis.</li>
+                            <li>Visualization: Built dashboards using Excel, Power BI and Tableau.</li>
+                            <li>EDA: Conducted exploratory data analysis and presented insights.</li>
+                            <li>Reporting: Created final reports and presentation materials.</li>
+                        </ul>
                     </div>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-role">IT Instructor</div>
-                            <div class="exp-date">2025 | Nepal</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>IT Instructor</h3>
+                            <span class="timeline-date">2025 | Nepal</span>
                         </div>
-                        <div class="exp-company">Augusta Institute of Technology</div>
-                        <div class="exp-details">
-                            <p>> Training: Coached newly-hired IT specialists on advanced technical procedures.</p>
-                            <p>> Support: Assisted clients with diagnosis of software and hardware issues.</p>
-                        </div>
+                        <h4>Augusta Institute of Technology</h4>
+                        <ul>
+                            <li>Training: Coached newly-hired IT specialists on advanced technical procedures.</li>
+                            <li>Support: Assisted clients with diagnosis of software and hardware issues.</li>
+                        </ul>
                     </div>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-role">Sr. Front-End Developer (Intern)</div>
-                            <div class="exp-date">2024 | Nepal</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Sr. Front-End Developer (Intern)</h3>
+                            <span class="timeline-date">2024 | Nepal</span>
                         </div>
-                        <div class="exp-company">BINET Technologies Pvt. Ltd.</div>
-                        <div class="exp-details">
-                            <p>> Web Development: Developed responsive jewelry website using React, HTML, CSS and JavaScript.</p>
-                            <p>> Features: Implemented product zoom, 360° views and chat using Socket.io.</p>
-                        </div>
+                        <h4>BINET Technologies Pvt. Ltd.</h4>
+                        <ul>
+                            <li>Web Development: Developed responsive jewelry website using React, HTML, CSS and JavaScript.</li>
+                            <li>Features: Implemented product zoom, 360 views and chat using Socket.io for real-time communication.</li>
+                        </ul>
                     </div>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-role">Hackathon Participant</div>
-                            <div class="exp-date">2023 | Nepal</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Hackathon Participant</h3>
+                            <span class="timeline-date">2023 | Nepal</span>
                         </div>
-                        <div class="exp-company">OSM HACKFEST 2023 - CHITWAN REGION</div>
-                        <div class="exp-details">
-                            <p>> Mobile Development: Developed prototype using OpenStreetMap data for accident-prone area visualization in React Native.</p>
-                            <p>> Design: UI/UX design for Open Street Map using Figma.</p>
-                        </div>
+                        <h4>OSM HACKFEST 2023 - CHITWAN REGION</h4>
+                        <ul>
+                            <li>Mobile Development: Developed prototype using OpenStreetMap data for accident-prone area visualization in React Native.</li>
+                            <li>Design: UI/UX design for Open Street Map using Figma.</li>
+                        </ul>
                     </div>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-role">Web Developer (Trainee)</div>
-                            <div class="exp-date">2023 | Nepal</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Web Developer (Trainee)</h3>
+                            <span class="timeline-date">2023 | Nepal</span>
                         </div>
-                        <div class="exp-company">Digital Yeti Pvt. Ltd.</div>
-                        <div class="exp-details">
-                            <p>> Frontend: Built Gym website frontend using Bootstrap with DOM manipulation.</p>
-                            <p>> React: Integrated Axios for API communication, React Hooks for state management.</p>
-                            <p>> Mobile: Developed and maintained mobile applications using React Native.</p>
-                        </div>
+                        <h4>Digital Yeti Pvt. Ltd.</h4>
+                        <ul>
+                            <li>Frontend: Built Gym website frontend using Bootstrap with DOM manipulation.</li>
+                            <li>React: Integrated Axios for API communication, React Hooks for state management.</li>
+                            <li>Mobile: Developed and maintained mobile applications using React Native.</li>
+                        </ul>
                     </div>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div class="exp-role">Digital Marketing Trainee</div>
-                            <div class="exp-date">2021 | Nepal</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Digital Marketing Trainee</h3>
+                            <span class="timeline-date">2021 | Nepal</span>
                         </div>
-                        <div class="exp-company">Augusta Institute of Technology</div>
-                        <div class="exp-details">
-                            <p>> Professional Training: Digital Marketing, Website Planning, UI/UX, SEO, Web Analytics, SEM, Social Media Marketing, CRO, AdSense, Blogging.</p>
-                        </div>
+                        <h4>Augusta Institute of Technology</h4>
+                        <ul>
+                            <li>Professional Training: Digital Marketing, Website Planning, UI/UX, SEO, Web Analytics, SEM, Social Media Marketing, CRO, AdSense, Blogging.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section class="terminal" id="projects">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">ls projects/</div>
-                <div class="terminal-time"></div>
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="section-container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-icon"><i class="fas fa-blog"></i></div>
+                    <h3>Blog Nepal</h3>
+                    <span class="project-tech">Django</span>
+                    <p>Full-stack blog with CRUD operations, Django admin integration, dynamic content rendering, and mobile-responsive UI.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-icon"><i class="fas fa-car"></i></div>
+                    <h3>SafeDriveNepal</h3>
+                    <span class="project-tech">React Native</span>
+                    <p>App to identify risky road areas using map data. Designed UI/UX and data visualizations using Figma.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Food Delivery App</h3>
+                    <span class="project-tech">React.js</span>
+                    <p>Frontend with API integration, cart management and delivery functionality.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Booking System</h3>
+                    <span class="project-tech">Django</span>
+                    <p>Booking system with user authentication, CRUD operations, and interactive dashboard for resource allocation.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Real-Time Chat App</h3>
+                    <span class="project-tech">Django + WebSocket</span>
+                    <p>Real-time messaging with user authentication, WebSocket-based communication, and responsive UI.</p>
+                </div>
             </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">find projects/ -type f | head</span></div>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-blog"></i></div>
-                        <div class="project-name">Blog Nepal</div>
-                        <div class="project-tech">Django</div>
-                        <div class="project-desc">Full-stack blog with CRUD operations, Django admin integration, dynamic content rendering, and mobile-responsive UI.</div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section section-alt" id="certifications">
+        <div class="section-container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Supervised Machine Learning: Regression and Classification</h4>
+                    <span class="cert-issuer">Coursera</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Unsupervised Learning, Recommenders, Reinforcement Learning</h4>
+                    <span class="cert-issuer">Coursera</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Machine Learning with Python</h4>
+                    <span class="cert-issuer">IBM</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Machine Learning</h4>
+                    <span class="cert-issuer">Coursera</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Advanced Learning Algorithms</h4>
+                    <span class="cert-issuer">Coursera</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Divide and Conquer, Sorting and Searching, Randomized Algorithms</h4>
+                    <span class="cert-issuer">Coursera</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Data Analysis with Python</h4>
+                    <span class="cert-issuer">Cognitive Class</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Data Visualization Associate Early Internship</h4>
+                    <span class="cert-issuer">Saint Louis University</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Sr. Front-end Developer</h4>
+                    <span class="cert-issuer">BINET Technologies</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>OSM HACKFEST 2023 - CHITWAN REGION</h4>
+                    <span class="cert-issuer">Birendra Open Source Club</span>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h4>Digital Marketing</h4>
+                    <span class="cert-issuer">Augusta Institute of Technology</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section" id="research">
+        <div class="section-container">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="research-grid">
+                <div class="research-card"><i class="fas fa-flask"></i><span>Machine Learning</span></div>
+                <div class="research-card"><i class="fas fa-network-wired"></i><span>Deep Learning</span></div>
+                <div class="research-card"><i class="fas fa-lightbulb"></i><span>Explainable AI</span></div>
+                <div class="research-card"><i class="fas fa-graduation-cap"></i><span>Educational Data Mining</span></div>
+                <div class="research-card"><i class="fas fa-robot"></i><span>Intelligent Systems</span></div>
+                <div class="research-card"><i class="fas fa-hands-helping"></i><span>AI for Social Impact</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="section section-alt" id="resume">
+        <div class="section-container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-section">
+                <div class="resume-icon"><i class="fas fa-file-pdf"></i></div>
+                <h3>Kaushal Acharya</h3>
+                <p>Software Developer | Data Analyst | ML Enthusiast</p>
+                <a href="portfolio/main/static/main/resume/Kaushal_Acharya_Resume.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-grid">
+                <a href="mailto:kaushal.acharya1999@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>kaushal.acharya1999@gmail.com</p>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-car"></i></div>
-                        <div class="project-name">SafeDriveNepal</div>
-                        <div class="project-tech">React Native</div>
-                        <div class="project-desc">App to identify risky road areas using map data. Designed UI/UX and data visualizations using Figma.</div>
+                </a>
+                <a href="tel:+9779867866025" class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+977-9867866025</p>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-utensils"></i></div>
-                        <div class="project-name">Food Delivery App</div>
-                        <div class="project-tech">React.js</div>
-                        <div class="project-desc">Frontend with API integration, cart management and delivery functionality.</div>
+                </a>
+                <a href="https://linkedin.com/in/kaushalacharya" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p>linkedin.com/in/kaushalacharya</p>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-calendar-check"></i></div>
-                        <div class="project-name">Booking System</div>
-                        <div class="project-tech">Django</div>
-                        <div class="project-desc">Booking system with user authentication, CRUD operations, and interactive dashboard for resource allocation.</div>
+                </a>
+                <a href="https://github.com/Kaushal164" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <p>github.com/Kaushal164</p>
                     </div>
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-comments"></i></div>
-                        <div class="project-name">Real-Time Chat App</div>
-                        <div class="project-tech">Django + WebSocket</div>
-                        <div class="project-desc">Real-time messaging with user authentication, WebSocket-based communication, and responsive UI.</div>
+                </a>
+                <a href="https://www.kaushalacharya.com.np" target="_blank" class="contact-card">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h4>Website</h4>
+                        <p>www.kaushalacharya.com.np</p>
+                    </div>
+                </a>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Bharatpur-12, Chitwan, Nepal</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Certifications Section -->
-        <section class="terminal" id="certifications">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">cat certifications.md</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">cat certifications.md</span></div>
-                <div class="cert-list">
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Supervised Machine Learning: Regression and Classification</span><span class="cert-issuer">Coursera</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Unsupervised Learning, Recommenders, Reinforcement Learning</span><span class="cert-issuer">Coursera</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Machine Learning with Python</span><span class="cert-issuer">IBM</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Machine Learning</span><span class="cert-issuer">Coursera</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Advanced Learning Algorithms</span><span class="cert-issuer">Coursera</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Divide and Conquer, Sorting and Searching, Randomized Algorithms</span><span class="cert-issuer">Coursera</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Data Analysis with Python</span><span class="cert-issuer">Cognitive Class</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Data Visualization Associate Early Internship</span><span class="cert-issuer">Saint Louis University</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Sr. Front-end Developer</span><span class="cert-issuer">BINET Technologies</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">OSM HACKFEST 2023 - CHITWAN REGION</span><span class="cert-issuer">Birendra Open Source Club</span></div>
-                    <div class="cert-item"><span class="cert-badge"><i class="fas fa-certificate"></i></span><span class="cert-name">Digital Marketing</span><span class="cert-issuer">Augusta Institute of Technology</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Section -->
-        <section class="terminal" id="research">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">cat research_interests.txt</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">cat research_interests.txt</span></div>
-                <div class="research-list">
-                    <div class="research-item"><i class="fas fa-flask"></i> Machine Learning</div>
-                    <div class="research-item"><i class="fas fa-network-wired"></i> Deep Learning</div>
-                    <div class="research-item"><i class="fas fa-lightbulb"></i> Explainable AI</div>
-                    <div class="research-item"><i class="fas fa-graduation-cap"></i> Educational Data Mining</div>
-                    <div class="research-item"><i class="fas fa-robot"></i> Intelligent Systems</div>
-                    <div class="research-item"><i class="fas fa-hands-helping"></i> AI for Social Impact</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resume Section -->
-        <section class="terminal" id="resume">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">download resume.pdf</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">wget resume.pdf</span></div>
-                <div class="resume-download">
-                    <div class="resume-icon"><i class="fas fa-file-pdf"></i></div>
-                    <p>Kaushal_Acharya_Resume.pdf</p>
-                    <a href="portfolio/main/static/main/resume/Kaushal_Acharya_Resume.pdf" download class="download-btn"><i class="fas fa-download"></i> Download Resume</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="terminal" id="contact">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">./contact.sh</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">./contact.sh</span></div>
-                <div class="contact-grid">
-                    <a href="mailto:kaushal.acharya1999@gmail.com" class="contact-card">
-                        <i class="fas fa-envelope"></i>
-                        <span>kaushal.acharya1999@gmail.com</span>
-                    </a>
-                    <a href="tel:+9779867866025" class="contact-card">
-                        <i class="fas fa-phone"></i>
-                        <span>+977-9867866025</span>
-                    </a>
-                    <a href="https://linkedin.com/in/kaushalacharya" target="_blank" class="contact-card">
-                        <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/kaushalacharya</span>
-                    </a>
-                    <a href="https://github.com/Kaushal164" target="_blank" class="contact-card">
-                        <i class="fab fa-github"></i>
-                        <span>github.com/Kaushal164</span>
-                    </a>
-                    <a href="https://www.kaushalacharya.com.np" target="_blank" class="contact-card">
-                        <i class="fas fa-globe"></i>
-                        <span>www.kaushalacharya.com.np</span>
-                    </a>
-                    <div class="contact-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Bharatpur-12, Chitwan, Nepal</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- References Section -->
-        <section class="terminal" id="references">
-            <div class="terminal-header">
-                <div class="buttons"><div class="button red"></div><div class="button yellow"></div><div class="button green"></div></div>
-                <div class="title">cat references.txt</div>
-                <div class="terminal-time"></div>
-            </div>
-            <div class="terminal-body">
-                <div class="prompt"><span class="prompt-symbol">$</span><span class="prompt-text">cat references.txt</span></div>
-                <div class="references-list">
-                    <div class="ref-item">
-                        <div class="ref-name">Prithivi Raj Paneru</div>
-                        <div class="ref-title">Assistant Professor, Birendra Multiple Campus, TU</div>
-                        <div class="ref-email">prithivi.paneru@bimc.tu.edu.np</div>
-                    </div>
-                    <div class="ref-item">
-                        <div class="ref-name">Sandip Adhikari</div>
-                        <div class="ref-title">CEO, BINET Technologies Pvt. Ltd.</div>
-                        <div class="ref-email">sandipadhikari880@gmail.com</div>
-                    </div>
-                    <div class="ref-item">
-                        <div class="ref-name">Ramesh Neupane</div>
-                        <div class="ref-title">Teaching Assistant, Birendra Multiple Campus, TU</div>
-                        <div class="ref-email">ramesh.neupane@bimc.tu.edu.np</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
             <p>&copy; 2025 Kaushal Acharya. All rights reserved.</p>
             <div class="footer-links">
                 <a href="https://github.com/Kaushal164" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/kaushalacharya" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:kaushal.acharya1999@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
-        </footer>
-    </main>
+        </div>
+    </footer>
 
-    <!-- AI Chatbox -->
+    <!-- AI Chatbox Toggle -->
     <div class="chatbox-toggle" id="chatboxToggle">
         <i class="fas fa-robot"></i>
         <span class="chat-notification">1</span>
     </div>
+
+    <!-- AI Chatbox -->
     <div class="chatbox" id="chatbox">
         <div class="chatbox-header">
-            <div class="chatbox-title">
-                <i class="fas fa-robot"></i>
-                <span>Kaushal's Assistant</span>
+            <div class="chatbox-avatar">KA</div>
+            <div class="chatbox-info">
+                <span class="chatbox-name">Kaushal's Assistant</span>
+                <span class="chatbox-status"><span class="status-dot"></span> Online</span>
             </div>
             <button class="chatbox-close" id="chatboxClose"><i class="fas fa-times"></i></button>
         </div>
         <div class="chatbox-messages" id="chatboxMessages">
             <div class="chat-message bot">
-                <div class="message-avatar"><i class="fas fa-robot"></i></div>
-                <div class="message-content">Hi! I'm Kaushal's AI Assistant. Ask me anything about his skills, experience, projects, or education. Try typing "skills", "projects", or "contact"!</div>
+                <div class="message-content">
+                    <p>Hi! I'm Kaushal's AI Assistant. I can help you with:</p>
+                    <ul>
+                        <li>Skills & Technologies</li>
+                        <li>Education & Research</li>
+                        <li>Location & Experience</li>
+                        <li>Projects & Certifications</li>
+                        <li>Contact Information</li>
+                    </ul>
+                    <p>Feel free to ask me anything!</p>
+                </div>
+                <span class="message-time"></span>
             </div>
         </div>
+        <div class="chatbox-suggestions">
+            <button class="suggestion-btn" data-query="What are your skills?">What are your skills?</button>
+            <button class="suggestion-btn" data-query="Tell me about your experience">Tell me about your experience</button>
+            <button class="suggestion-btn" data-query="What projects have you built?">What projects have you built?</button>
+            <button class="suggestion-btn" data-query="Where are you located?">Where are you located?</button>
+        </div>
         <div class="chatbox-input-area">
-            <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Ask about Kaushal..." autocomplete="off">
+            <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Ask me anything..." autocomplete="off">
             <button class="chatbox-send" id="chatboxSend"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
