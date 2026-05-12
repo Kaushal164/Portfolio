@@ -122,7 +122,7 @@ document.querySelectorAll('.hero-badge, .hero-title, .hero-roles, .hero-desc, .h
 });
 
 // Role typewriter
-const roles = ['Digital Experiences', 'Web Applications', 'Data Pipelines', 'ML Models', 'React Interfaces', 'APIs & Systems'];
+const roles = ['Web Applications', 'APIs and Systems', 'Softwares'];
 let roleIndex = 0;
 function typeRole() {
     const el = document.getElementById('roleText');
@@ -195,6 +195,9 @@ const aiMessages = document.getElementById('aiMessages');
 // Set initial time
 document.querySelector('.ai-msg-time').textContent = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
 
+// Auto-open chatbox after loading
+setTimeout(() => { aiPanel.classList.add('active'); }, 2500);
+
 aiToggle.addEventListener('click', () => { aiPanel.classList.toggle('active'); if (aiPanel.classList.contains('active')) aiInput.focus(); });
 aiClose.addEventListener('click', () => aiPanel.classList.remove('active'));
 aiSend.addEventListener('click', sendAiMessage);
@@ -209,7 +212,13 @@ function sendAiMessage() {
     if (!text) return;
     addAiMsg(text, 'user');
     aiInput.value = '';
-    setTimeout(() => { addAiMsg(getAiResponse(text), 'bot'); }, 500 + Math.random() * 500);
+    // Show typing indicator
+    const typing = document.createElement('div');
+    typing.className = 'ai-msg bot ai-typing';
+    typing.innerHTML = '<div class="ai-msg-content"><span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></div>';
+    aiMessages.appendChild(typing);
+    aiMessages.scrollTop = aiMessages.scrollHeight;
+    setTimeout(() => { typing.remove(); addAiMsg(getAiResponse(text), 'bot'); }, 800 + Math.random() * 600);
 }
 
 function addAiMsg(text, type) {
@@ -244,8 +253,9 @@ function getAiResponse(q) {
     if (query.match(/research|ml|ai|machine learning/)) return "Research interests: Machine Learning, Deep Learning, Explainable AI, Educational Data Mining, Intelligent Systems, and AI for Social Impact.";
     if (query.match(/available|open|freelance/)) return "Kaushal is open to opportunities in Software Development, Data Analysis, and ML roles. Reach him at kaushal.acharya1999@gmail.com!";
     if (query.match(/location|where|country/)) return "Kaushal is based in Bharatpur-12, Chitwan, Nepal. Open to remote work worldwide!";
-    if (query.match(/resume|cv|download/)) return "You can download Kaushal's resume from the hero section button or the Resume link. It includes all his experience and certifications!";
-    return "I can help with info about Kaushal's skills, projects, experience, education, certifications, or contact details. What would you like to know?";
+    if (query.match(/resume|cv|download/)) return "You can download Kaushal's resume using the 'Download CV' button in the hero section, or click 'Preview CV' to view it directly in your browser without downloading!";
+    if (query.match(/freelance|available|hire|open/)) return "Yes! Kaushal is available for freelance work and full-time opportunities in:\n\n- Full Stack Web Development\n- Data Analysis & Visualization\n- Machine Learning Projects\n- React/Django Applications\n\nReach out: kaushal.acharya1999@gmail.com";
+    return "I can help with info about Kaushal's skills, projects, experience, education, certifications, resume, or contact details. What would you like to know?";
 }
 
 // ===== CONTACT FORM =====
