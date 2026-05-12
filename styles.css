@@ -33,16 +33,16 @@ img{max-width:100%}
 .navbar{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 32px);max-width:1280px;background:rgba(10,10,30,.8);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:16px;padding:10px 16px;transition:all .4s;opacity:0;transform:translateX(-50%) translateY(-20px);overflow:visible}
 .navbar.visible{opacity:1;transform:translateX(-50%) translateY(0)}
 .navbar.scrolled{background:rgba(5,5,16,.95);box-shadow:var(--glow)}
-.nav-container{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%}
+.nav-container{display:flex;align-items:center;justify-content:space-between;gap:6px;width:100%}
 .nav-logo{font-family:var(--font);font-size:15px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:6px;flex-shrink:0}
-.nav-logo-img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 8px rgba(99,102,241,.3)}
+.nav-logo-img{width:26px;height:26px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 8px rgba(99,102,241,.3)}
 .logo-bracket{color:var(--accent)}
-.nav-links{display:flex;gap:2px;flex-shrink:1;flex-wrap:nowrap}
-.nav-link{font-size:12px;padding:6px 9px;border-radius:6px;color:var(--text-dim);transition:all .3s;position:relative;white-space:nowrap}
+.nav-links{display:flex;gap:1px;flex-shrink:1;flex-wrap:nowrap;overflow:visible}
+.nav-link{font-size:11px;padding:6px 7px;border-radius:6px;color:var(--text-dim);transition:all .3s;position:relative;white-space:nowrap}
 .nav-link:hover,.nav-link.active{color:var(--text);background:var(--glass)}
 .nav-link.active::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:20px;height:2px;background:var(--accent);border-radius:2px}
 .nav-actions{display:flex;align-items:center;gap:12px}
-.nav-cta{background:var(--gradient);color:#fff;border:none;padding:7px 16px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--font);transition:all .3s;box-shadow:0 4px 15px rgba(99,102,241,.3);white-space:nowrap}
+.nav-cta{background:var(--gradient);color:#fff;border:none;padding:6px 14px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;font-family:var(--font);transition:all .3s;box-shadow:0 4px 15px rgba(99,102,241,.3);white-space:nowrap}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(99,102,241,.4)}
 .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .nav-toggle span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;transition:.3s;border-radius:2px}
