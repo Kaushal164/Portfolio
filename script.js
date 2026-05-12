@@ -175,14 +175,21 @@ const style = document.createElement('style');
 style.textContent = '.visible{opacity:1!important;transform:translateY(0)!important}';
 document.head.appendChild(style);
 
-// ===== AI ASSISTANT =====
+// ===== AI ASSISTANT (Real Resume Data) =====
 const aiData = {
-    skills: "Kaushal's tech stack:\n\n- Frontend: HTML, CSS, JavaScript, React, React Native, Bootstrap\n- Backend: Python, Django, REST APIs, WebSocket\n- Data & ML: Supervised/Unsupervised Learning, ANN, Reinforcement Learning, Data Analysis, Power BI, Tableau\n- Tools: Git, Figma, VS Code, Excel\n- Soft: Teaching, Academic Writing, Problem Solving",
-    projects: "Featured projects:\n\n1. Blog Nepal (Django) - Full-stack CRUD blog\n2. SafeDriveNepal (React Native) - Road safety visualization\n3. Food Delivery App (React.js) - Cart & delivery system\n4. Booking System (Django) - Auth + dashboard\n5. Real-Time Chat (Django + WebSocket)",
-    experience: "Work experience:\n\n- Data Analyst Intern @ Saint Louis University (2025)\n- IT Instructor @ Augusta Institute (2025)\n- Sr. Front-End Dev @ BINET Technologies (2024)\n- Web Developer @ Digital Yeti (2023)\n- Hackathon @ OSM HACKFEST 2023",
-    education: "Education:\n\n- BSc CSIT - Birendra Multiple Campus, TU (72.64%, 2023)\n- +2 Science - SkyRider College (GPA: 3.08, 2018)\n- SLC - Sky Rider English Boarding HSS (GPA: 3.5, 2016)",
-    contact: "Contact Kaushal:\n\n- Email: kaushal.acharya1999@gmail.com\n- Phone: +977-9867866025\n- LinkedIn: linkedin.com/in/kaushalacharya\n- GitHub: github.com/Kaushal164\n- Location: Bharatpur-12, Chitwan, Nepal",
-    about: "Kaushal Acharya is a BSc CSIT graduate from Nepal specializing in full-stack web development, data analytics, and machine learning. He builds impactful applications and is passionate about AI for social good."
+    skills: "Here's Kaushal's actual tech stack:\n\n**Programming:** HTML, CSS, JavaScript, React, Python, Java, SQL\n**Machine Learning:** Supervised Learning, Unsupervised Learning, ANN, Reinforcement Learning\n**Tools:** Figma, Power BI, Excel, Git, VS Code\n**Technical:** Data Analysis, Data Visualization, Database Management, Algorithms\n**Soft Skills:** Teaching, Academic Writing, Problem Solving, Critical Thinking",
+    frontend: "Kaushal's frontend expertise includes:\n\n- HTML5, CSS3, JavaScript (ES6+)\n- React.js & React Native\n- Bootstrap, Responsive Design\n- DOM Manipulation\n- Socket.io for real-time features\n- UI/UX Design with Figma",
+    backend: "Kaushal's backend & database skills:\n\n- Python & Django (Full-stack)\n- REST APIs & WebSocket\n- SQL & Database Management\n- User Authentication & CRUD\n- Real-time communication systems",
+    projects: "Here are Kaushal's real projects:\n\n1. **Blog Nepal** (Django) - Full-stack blog with CRUD operations, Django admin, dynamic content rendering, mobile-responsive UI\n\n2. **SafeDriveNepal** (React Native) - App to identify risky road areas using OpenStreetMap data, UI/UX designed in Figma\n\n3. **Food Delivery App** (React.js) - Frontend with API integration, cart management & delivery functionality\n\n4. **Booking System** (Django) - User authentication, CRUD operations, interactive dashboard for resource allocation\n\n5. **Real-Time Chat** (Django + WebSocket) - Real-time messaging with user auth & responsive UI",
+    experience: "Kaushal's professional experience:\n\n**Data Analyst Associate Intern** - Saint Louis University (2025, Remote)\n- Data cleaning, dashboards with Power BI & Tableau, EDA, reporting\n\n**IT Instructor** - Augusta Institute of Technology (2025, Nepal)\n- Trained IT specialists, assisted with software/hardware diagnosis\n\n**Sr. Front-End Developer (Intern)** - BINET Technologies (2024, Nepal)\n- Built responsive jewelry website with React, implemented Socket.io chat, product zoom & 360° views\n\n**Web Developer (Trainee)** - Digital Yeti Pvt. Ltd. (2023, Nepal)\n- Built Gym website with Bootstrap, React with Axios, React Native mobile apps\n\n**Hackathon Participant** - OSM HACKFEST 2023\n- Developed React Native prototype for accident-prone area visualization",
+    education: "Kaushal's education:\n\n- **BSc CSIT** - Birendra Multiple Campus, TU (72.64%, 2023)\n- **+2 Science** - SkyRider College (GPA: 3.08, 2018)\n- **SLC** - Sky Rider English Boarding HSS (GPA: 3.5, 2016)",
+    contact: "You can reach Kaushal through:\n\n- **Email:** kaushal.acharya1999@gmail.com\n- **Phone:** +977-9867866025\n- **LinkedIn:** linkedin.com/in/kaushalacharya\n- **GitHub:** github.com/Kaushal164\n- **Website:** www.kaushalacharya.com.np\n- **Location:** Bharatpur-12, Chitwan, Nepal",
+    about: "Kaushal Acharya is a BSc CSIT graduate from Birendra Multiple Campus, TU Nepal. He specializes in full-stack web development (React, Django), data analytics (Power BI, Tableau, Python), and machine learning. He's passionate about building impactful applications and exploring AI for social good.",
+    certifications: "Kaushal holds 11+ certifications:\n\n- Supervised Machine Learning (Coursera)\n- Unsupervised Learning, Recommenders, RL (Coursera)\n- Machine Learning with Python (IBM)\n- Machine Learning (Coursera)\n- Advanced Learning Algorithms (Coursera)\n- Divide and Conquer, Sorting, Searching Algorithms (Coursera)\n- Data Analysis with Python (Cognitive Class)\n- Data Visualization Associate (Saint Louis University)\n- Sr. Front-end Developer (BINET Technologies)\n- OSM HACKFEST 2023 (Birendra Open Source Club)\n- Digital Marketing (Augusta Institute)",
+    research: "Kaushal's research interests:\n\n- Machine Learning & Deep Learning\n- Explainable AI\n- Educational Data Mining\n- Intelligent Systems\n- AI for Social Impact",
+    freelance: "Yes! Kaushal is open to freelance work and collaborations in:\n\n- Full-Stack Web Development (React + Django)\n- Data Analysis & Visualization\n- Machine Learning Projects\n- React Native Mobile Apps\n- Frontend Development\n\nReach out at kaushal.acharya1999@gmail.com or use the contact section!",
+    resume: "You can download Kaushal's resume using the **Download CV** button in the hero section, or click **Preview CV** to view it directly in your browser!\n\nHis resume covers all his experience at Saint Louis University, BINET Technologies, Digital Yeti, certifications, and projects.",
+    services: "Kaushal offers:\n\n- Full-Stack Web Development\n- Frontend Development (React, JS)\n- Data Analysis & Dashboard Creation\n- Machine Learning Solutions\n- Mobile App Development (React Native)\n- UI/UX Design\n- IT Training & Consultation"
 };
 
 const aiToggle = document.getElementById('aiToggle');
@@ -197,6 +204,20 @@ document.querySelector('.ai-msg-time').textContent = new Date().toLocaleTimeStri
 
 // Auto-open chatbox after loading
 setTimeout(() => { aiPanel.classList.add('active'); }, 2500);
+
+// Idle prompt after 25 seconds
+let idleTimer;
+function resetIdleTimer() {
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => {
+        if (aiPanel.classList.contains('active') && aiMessages.querySelectorAll('.ai-msg.user').length === 0) {
+            addAiMsg("Need help exploring the portfolio? Try asking about Kaushal's projects, skills, or availability! 🚀", 'bot');
+        }
+    }, 25000);
+}
+resetIdleTimer();
+document.addEventListener('mousemove', resetIdleTimer);
+document.addEventListener('keydown', resetIdleTimer);
 
 aiToggle.addEventListener('click', () => { aiPanel.classList.toggle('active'); if (aiPanel.classList.contains('active')) aiInput.focus(); });
 aiClose.addEventListener('click', () => aiPanel.classList.remove('active'));
@@ -243,19 +264,52 @@ function addAiMsg(text, type) {
 
 function getAiResponse(q) {
     const query = q.toLowerCase();
-    if (query.match(/^(hi|hello|hey|namaste)/)) return "Namaste! I'm Kaushal's AI assistant. Ask me about his skills, projects, experience, education, or contact info!";
-    if (query.match(/skill|tech|stack|language/)) return aiData.skills;
-    if (query.match(/project|built|app|work on/)) return aiData.projects;
-    if (query.match(/experience|job|career|intern|work/)) return aiData.experience;
-    if (query.match(/education|study|degree|college/)) return aiData.education;
-    if (query.match(/contact|email|phone|hire|reach|connect/)) return aiData.contact;
-    if (query.match(/about|who|introduce|tell me/)) return aiData.about;
-    if (query.match(/research|ml|ai|machine learning/)) return "Research interests: Machine Learning, Deep Learning, Explainable AI, Educational Data Mining, Intelligent Systems, and AI for Social Impact.";
-    if (query.match(/available|open|freelance/)) return "Kaushal is open to opportunities in Software Development, Data Analysis, and ML roles. Reach him at kaushal.acharya1999@gmail.com!";
-    if (query.match(/location|where|country/)) return "Kaushal is based in Bharatpur-12, Chitwan, Nepal. Open to remote work worldwide!";
-    if (query.match(/resume|cv|download/)) return "You can download Kaushal's resume using the 'Download CV' button in the hero section, or click 'Preview CV' to view it directly in your browser without downloading!";
-    if (query.match(/freelance|available|hire|open/)) return "Yes! Kaushal is available for freelance work and full-time opportunities in:\n\n- Full Stack Web Development\n- Data Analysis & Visualization\n- Machine Learning Projects\n- React/Django Applications\n\nReach out: kaushal.acharya1999@gmail.com";
-    return "I can help with info about Kaushal's skills, projects, experience, education, certifications, resume, or contact details. What would you like to know?";
+    // Greetings
+    if (query.match(/^(hi|hello|hey|namaste|greetings|sup|yo)/)) return "Hey there! 👋 I'm Kaushal's AI assistant. I can help you explore his projects, skills, experience, and services. What would you like to know?";
+    // Skills
+    if (query.match(/skill|tech|stack|language|programming|what.*use|what.*know/)) return aiData.skills;
+    // Frontend specific
+    if (query.match(/frontend|front-end|react|html|css|javascript|ui/)) return aiData.frontend;
+    // Backend specific
+    if (query.match(/backend|back-end|python|django|database|sql|api|server/)) return aiData.backend;
+    // Projects
+    if (query.match(/project|built|develop|portfolio|app|work.*on|show.*project|best project/)) return aiData.projects;
+    // Experience
+    if (query.match(/experience|job|career|intern|work|company|where.*work/)) return aiData.experience;
+    // Education
+    if (query.match(/education|study|degree|college|university|school|qualification/)) return aiData.education;
+    // Contact
+    if (query.match(/contact|email|phone|reach|connect|how.*reach|get.*touch/)) return aiData.contact;
+    // About
+    if (query.match(/about|who|introduce|tell.*about|yourself|kaushal/)) return aiData.about;
+    // Certifications
+    if (query.match(/certif|course|credential|license|training/)) return aiData.certifications;
+    // Research
+    if (query.match(/research|interest|ml|ai|machine learning|deep learning|explainable/)) return aiData.research;
+    // Freelance / Hiring
+    if (query.match(/freelance|available|hire|open|opportunity|contract|work.*together|collaboration/)) return aiData.freelance;
+    // Resume
+    if (query.match(/resume|cv|download|pdf/)) return aiData.resume;
+    // Services
+    if (query.match(/service|offer|what.*do|provide|help.*with/)) return aiData.services;
+    // GitHub
+    if (query.match(/github|git|repo|code|open.*source/)) return "You can explore Kaushal's code on GitHub:\n\n**github.com/Kaushal164**\n\nHe has repositories for Blog Nepal, SafeDriveNepal, booking systems, and more!";
+    // LinkedIn
+    if (query.match(/linkedin|professional|network/)) return "Connect with Kaushal on LinkedIn:\n\n**linkedin.com/in/kaushalacharya**";
+    // Location
+    if (query.match(/location|where|address|country|city|based|nepal/)) return "Kaushal is based in Bharatpur-12, Chitwan, Nepal. He's open to remote work worldwide and currently working remotely with Saint Louis University!";
+    // Timeline / Budget (Lead gen)
+    if (query.match(/timeline|budget|cost|price|how.*much|quote|estimate/)) return "I'd be happy to help connect you with Kaushal for project discussions! Could you share:\n\n1. What you're building\n2. Your expected timeline\n3. Approximate budget range\n\nOr you can use the contact section to send him a message directly!";
+    // Recruiter mode
+    if (query.match(/recruiter|hiring.*manager|talent|position|role|job.*opening/)) return "Great to have you here! Here's a quick summary for recruiters:\n\n**Kaushal Acharya** - BSc CSIT Graduate\n- 6+ work experiences including remote Data Analyst role\n- Strongest in: React, Django, Python, Data Analysis, ML\n- 11+ certifications (Coursera, IBM, Stanford)\n- Available for: Full-time, Remote, Freelance\n\nDownload his CV using the 'Download CV' button above!";
+    // Availability
+    if (query.match(/when.*available|start.*when|notice.*period|immediate/)) return "Kaushal is currently available for new opportunities and can start discussions immediately. He's flexible with remote work schedules across different time zones.";
+    // Thank you
+    if (query.match(/thank|thanks|thx|appreciate/)) return "You're welcome! 😊 Let me know if there's anything else I can help you with. Feel free to explore the portfolio or reach out to Kaushal directly!";
+    // Goodbye
+    if (query.match(/bye|goodbye|see.*you|later|gtg/)) return "Goodbye! 👋 Thanks for visiting Kaushal's portfolio. Feel free to come back anytime. Have a great day!";
+    // Default fallback
+    return "I may not have that specific information yet, but I can help with:\n\n- Skills & Technologies\n- Projects\n- Experience\n- Certifications\n- Freelance availability\n- Contact info\n- Services offered\n\nOr you can contact Kaushal directly at kaushal.acharya1999@gmail.com!";
 }
 
 // ===== CONTACT FORM =====
