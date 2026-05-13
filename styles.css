@@ -34,8 +34,8 @@ img{max-width:100%}
 .navbar{
   position: fixed;
   top: 10px;
-  right: -14px;
-  width: 800px;
+  right: -15px;
+  width: 780px;
   z-index: 1000;
 
   background: rgba(10,10,30,.88);
@@ -94,7 +94,7 @@ img{max-width:100%}
   flex: 1;
   gap: 18px;
 
-  margin-left: 10px;
+  margin-left: 9px;
 
   overflow: visible;
   flex-wrap: nowrap;
