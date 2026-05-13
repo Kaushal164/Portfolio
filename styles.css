@@ -505,7 +505,7 @@ img{max-width:100%}
 }
 /* ===== RESPONSIVE NAVBAR ===== */
 
-@media (max-width: 1300px){
+@media (max-width: 1600px){
 
   .navbar{
     width: calc(100vw - 24px);
