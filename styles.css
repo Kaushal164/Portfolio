@@ -34,13 +34,12 @@ img{max-width:100%}
 .navbar{
   position: fixed;
   top: 16px;
-  left: 12px;
-  right: 12px;
-  transform: translateY(-20px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
   z-index: 1000;
 
-  width: auto;
-  max-width: none;
+  width: calc(100vw - 32px);
+  max-width: 1250px;
 
   background: rgba(10,10,30,.88);
   backdrop-filter: blur(20px);
@@ -58,7 +57,7 @@ img{max-width:100%}
 }
 .navbar.visible{
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .navbar.scrolled{
