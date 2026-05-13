@@ -35,7 +35,7 @@ img{max-width:100%}
   position: fixed;
   top: 12px;
   left: 300px;
-  right: 0px;
+  right: calc(100% - 320px);
   z-index: 1000;
 
   background: rgba(10,10,30,.88);
