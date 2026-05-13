@@ -34,7 +34,7 @@ img{max-width:100%}
 .navbar{
   position: fixed;
   top: 10px;
-  right: -15px;
+  right: -20px;
   width: 780px;
   z-index: 1000;
 
