@@ -42,7 +42,7 @@ img{max-width:100%}
   backdrop-filter: blur(20px);
 
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 60px;
 
   padding: 12px 22px;
   box-sizing: border-box;
