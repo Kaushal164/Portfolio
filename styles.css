@@ -94,7 +94,7 @@ img{max-width:100%}
   flex: 1;
   gap: 18px;
 
-  margin-left: 9px;
+  margin-left: 0px;
 
   overflow: visible;
   flex-wrap: nowrap;
