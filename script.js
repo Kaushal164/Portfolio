@@ -79,8 +79,8 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const current = window.scrollY;
     navbar.classList.toggle('scrolled', current > 80);
-    if (current > lastScroll && current > 200) navbar.style.transform = 'translateX(-50%) translateY(-100%)';
-    else navbar.style.transform = 'translateX(-50%) translateY(0)';
+    if (current > lastScroll && current > 200) navbar.style.transform = 'translateY(-100%)';
+    else navbar.style.transform = 'translateY(0)';
     lastScroll = current;
 
     // Scroll to top button
