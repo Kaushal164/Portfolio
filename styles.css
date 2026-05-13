@@ -38,16 +38,16 @@ img{max-width:100%}
   transform: translateX(-50%) translateY(-20px);
   z-index: 1000;
 
-  width: calc(100% - 24px);
-  max-width: 1400px;
+  width: calc(100vw - 32px);
+  max-width: 1250px;
 
-  background: rgba(10,10,30,.85);
+  background: rgba(10,10,30,.88);
   backdrop-filter: blur(20px);
 
   border: 1px solid var(--border);
   border-radius: 16px;
 
-  padding: 12px 20px;
+  padding: 12px 18px;
   box-sizing: border-box;
 
   transition: all .4s;
@@ -62,7 +62,7 @@ img{max-width:100%}
 }
 
 .navbar.scrolled{
-  background: rgba(5,5,16,.95);
+  background: rgba(5,5,16,.96);
   box-shadow: var(--glow);
 }
 
@@ -72,7 +72,9 @@ img{max-width:100%}
   justify-content: space-between;
 
   width: 100%;
-  gap: 14px;
+  max-width: 100%;
+
+  gap: 10px;
 }
 
 .nav-logo{
@@ -99,15 +101,16 @@ img{max-width:100%}
   align-items: center;
   justify-content: center;
 
+  flex: 1;
+
   gap: 2px;
 
-  flex: 1;
-  min-width: 0;
+  overflow: visible;
 }
 
 .nav-link{
-  font-size: 12px;
-  padding: 8px 8px;
+  font-size: 11px;
+  padding: 8px 7px;
 
   border-radius: 8px;
 
@@ -134,7 +137,7 @@ img{max-width:100%}
 
   transform: translateX(-50%);
 
-  width: 18px;
+  width: 16px;
   height: 2px;
 
   background: var(--accent);
@@ -144,7 +147,8 @@ img{max-width:100%}
 .nav-actions{
   display: flex;
   align-items: center;
-  gap: 10px;
+
+  gap: 8px;
 
   flex-shrink: 0;
 }
@@ -155,11 +159,11 @@ img{max-width:100%}
 
   border: none;
 
-  padding: 8px 14px;
+  padding: 8px 12px;
 
   border-radius: 8px;
 
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
 
   cursor: pointer;
@@ -204,14 +208,14 @@ img{max-width:100%}
 
 /* ===== RESPONSIVE ===== */
 
-@media (max-width: 1150px){
+@media (max-width: 1300px){
 
   .nav-links{
     position: absolute;
 
     top: 72px;
-    left: 12px;
-    right: 12px;
+    left: 0;
+    right: 0;
 
     display: none;
     flex-direction: column;
@@ -222,7 +226,8 @@ img{max-width:100%}
     border: 1px solid var(--border);
     border-radius: 14px;
 
-    padding: 12px;
+    padding: 14px;
+
     gap: 6px;
   }
 
@@ -233,6 +238,7 @@ img{max-width:100%}
   .nav-link{
     width: 100%;
     padding: 12px;
+    font-size: 14px;
   }
 
   .nav-toggle{
@@ -497,30 +503,58 @@ img{max-width:100%}
     .resume-modal-content{width:95%;height:80vh}
     .resume-modal-header{padding:12px 16px}
 }
-@media (max-width: 1150px){
+/* ===== RESPONSIVE NAVBAR ===== */
+
+@media (max-width: 1300px){
+
+  .navbar{
+    width: calc(100vw - 24px);
+    max-width: 100%;
+    padding: 12px 16px;
+  }
+
+  .nav-container{
+    gap: 8px;
+  }
+
   .nav-links{
-    position:absolute;
-    top:70px;
-    left:12px;
-    right:12px;
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    background:rgba(10,10,30,.98);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:12px;
+    position: absolute;
+
+    top: 72px;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    background: rgba(10,10,30,.98);
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    padding: 14px;
+
+    gap: 6px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
   }
 
   .nav-links.active{
-    display:flex;
+    display: flex;
+  }
+
+  .nav-link{
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
   }
 
   .nav-toggle{
-    display:block;
+    display: block;
   }
 
   .nav-cta{
-    display:none;
+    display: none;
   }
 }
