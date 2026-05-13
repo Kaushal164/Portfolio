@@ -30,7 +30,7 @@ img{max-width:100%}
 #particlesCanvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4}
 
 /* ===== NAVBAR ===== */
-.navbar{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 24px);max-width:1400px;background:rgba(10,10,30,.8);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:16px;padding:12px 24px;transition:all .4s;opacity:0;transform:translateX(-50%) translateY(-20px);overflow:visible}
+.navbar{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 24px);max-width:1400px;background:rgba(10,10,30,.8);backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:16px;padding:12px 24px;transition:all .4s;opacity:0;transform:translateX(-50%) translateY(-20px);overflow:hidden}
 .navbar.visible{opacity:1;transform:translateX(-50%) translateY(0)}
 .navbar.scrolled{background:rgba(5,5,16,.95);box-shadow:var(--glow)}
 .nav-container{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
